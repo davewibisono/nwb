@@ -1,0 +1,22 @@
+# Main
+main:
+  - name: "About"
+    weight: 1
+    hasChildren: true
+  - name: "About Us"
+    weight: 1
+    url: /
+    parent: About
+  - name: "Community"
+    weight: 2
+    hasChildren: true
+  - name: "Our Community"
+    weight: 1
+    url: /
+    parent: Community
+  - name: "Using NWB"
+    weight: 3
+    url: /
+  - name: "Policies"
+    weight: 4
+    url: /

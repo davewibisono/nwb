@@ -1,0 +1,75 @@
+/* Colors */
+.primary {
+  color: #1a1f3029 !important;
+}
+.dark {
+  color: #d2d3d6 !important;
+}
+.orange {
+  color: #D17128 !important;
+}
+.bg-primary {
+  background-color: #1a1f3029 !important;
+}
+.bg-dark {
+  background-color: #d2d3d6 !important;
+}
+.bg-orange {
+  background-color: #D17128 !important;
+}
+
+/* Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
+
+.inter-400 {
+  font-family: "Inter", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 400 !important;
+  font-style: normal !important;
+  font-variation-settings: "slnt" 0 !important;
+}
+.inter-500 {
+  font-family: "Inter", sans-serif !important;
+  font-optical-sizing: auto !important;
+  font-weight: 500 !important;
+  font-style: normal !important;
+  font-variation-settings: "slnt" 0 !important;
+}
+
+/* Animation */
+.underline-hover:hover {
+  text-decoration: underline;
+  text-underline-offset: 5px;
+}
+.animate {
+  transition-property: all;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+.scale:hover {
+  transform: scale(1.1) !important;
+}
+/* Header */
+.dropdown-item:hover {
+  background-color: #d2d3d6 !important;
+}
+.dropdown-item:active {
+  background-color: #1a1f3029 !important;
+}
+.down-arrow {
+  width: 25px;
+}
+.gs-btn {
+  padding: 14px 0;
+}
+.gs-btn {
+  width: 130px;
+}
+.logoWidth {
+  width: 50% !important;
+}
+@media (min-width: 768px) {
+  .logoWidth {
+    width: 75% !important;
+  }
+}

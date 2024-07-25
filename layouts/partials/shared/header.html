@@ -1,0 +1,38 @@
+<nav class="navbar fixed-top bg-primary opacity-50 py-3">
+  <nav class="container-xl">
+    <nav class="col-md-3">
+      <a href="/">
+        <img src="{{ site.Params.logo }}" alt="nwb-logo" class="logoWidth">
+      </a>
+    </nav>
+    <nav class="d-lg-none">
+      <i class="bi bi-list dark h1"></i>
+    </nav>
+    <nav class="col-md-5 d-none d-lg-block">
+      <ul class="d-flex list-unstyled dark align-items-center">
+        {{ range site.Menus.main }}
+        {{ if .HasChildren }}
+        <div class="dropdown">
+          <button class="inter-400 nav-link animate px-3 d-flex justify-content-between" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <span>
+              {{ .Name }}
+            </span>
+            <img src="/images/down-arrow.png" alt="" class="down-arrow">
+          </button>
+          <ul class="dropdown-menu bg-dark opacity-100">
+            {{ range .Children }}
+            <li><a class="dropdown-item text-center animate inter-400 nav-link underline-hover animate px-3" href="{{ .URL }}">{{ .Name }}</a></li>
+            {{ end }}
+          </ul>
+        </div>
+        {{ else }}
+        <li><a href="{{ .URL }}" class="inter-400 nav-link underline-hover animate px-3">{{ .Name }}</a></li>
+        {{ end }}
+        {{ end }}
+      </ul>
+    </nav>
+    <nav class="col-md-2 d-lg-flex justify-content-end d-none">
+      <a href="" class="bg-orange nav-link text-center text-white rounded-2 fs-6 gs-btn inter-500 scale animate">Get Started</a>
+    </nav>
+  </nav>
+</nav>
