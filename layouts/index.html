@@ -1,28 +1,80 @@
 {{ define "main" }}
-<section class="hero bg-black">
-  <div class="container col-xxl-8 g-5">
-    <div class="row align-items-center justify-content-center py-5">
-      <div class="col-10 col-sm-8 col-lg-6">
-        <img src="/img/bootstrap-themes.png" alt="Bootstrap Themes" class="img-fluid d-block mx-auto">
-      </div>
-      <div class="col-lg-6 order-lg-first">
-        <h1>{{ .Params.heading }}</h1>
-        <p class="lead">{{ .Content }}</p>
-        <div class="d-grid gap-2 d-md-flex">
-          {{ with .Params.btn1 }}
-          {{ if and .text .url }}
-          <a role="button" href="{{ .url }}" target="_blank" class="btn btn-lg btn-primary px-4 me-md-2">{{ .text }}</a>
-          {{ end }}
-          {{ end }}
-          {{ with .Params.btn2 }}
-          {{ if and .text .url }}
-          <a role="button" href="{{ .url }}" target="_blank" class="btn btn-lg btn-outline-secondary px-4">{{ .text
-            }}</a>
-          {{ end }}
-          {{ end }}
+{{/*  Hero Section  */}}
+<section class="hero bg-primary">
+  <div class="position-relative overflow-hidden w-100 h-100">
+    <div>
+      <img src="/images/essentials/circle.png" alt="nwb-home" class="w-25">
+    </div>
+    <div class="position-absolute heroDots">
+      <img src="/images/essentials/dots.png" alt="nwb-home" class="w-50">
+    </div>
+    <div class="position-absolute blueDots w-100 h-100">
+      <img src="/images/essentials/blue-dots.png" alt="nwb-home" class="bluePart">
+    </div>
+    <div class="swiper container-lg mySlide px-2 px-md-0">
+      <!-- Additional required wrapper -->
+      <div class="swiper-wrapper">
+        <!-- Slides -->
+        <div class="swiper-slide d-flex flex-column justify-content-center flex-md-row-reverse align-items-center py-5">
+          <div class="col-12 col-md-8 pb-5 pb-md-0 d-flex justify-content-center d-md-block z-1">
+              <img src="/images/hero.png" alt="nwb-home" class="heroImg">
+          </div>
+          <div class="col-12 col-sm-8 col-md-4 ps-2 ps-md-0 z-2 d-flex flex-column gap-3">
+              <h1 class="inter-700 text-white text-48">Neurodata Without Borders: Neurophysiology Data Format</h1>
+              <p class="inter-500 dark-text text-18">Version 2.0 FINAL Now Available</p>
+            <div>
+              <a href=""
+                class="btn btn-primary btn-lg text-18 bg-yellow border-yellow inter-500 translate animate">Read
+                More</a>
+            </div>
+          </div>
         </div>
+      </div>
+      <!-- If we need pagination -->
+      <div class="swiper-pagination"></div>
+    </div>
+  </div>
+</section>
+{{/*  End Hero Section  */}}
+
+{{/*  Banner Section  */}}
+<section class="w-100 bg-sky">
+  <div class="py-4 banner mx-auto">
+    <p class="inter-600 text-24 text-center mb-0">Making databases about the brain more usable and accessible for neuroscientists worldwide</p>
+  </div>
+</section>
+{{/*  End Banner Section  */}}
+
+
+{{/*  About Section  */}}
+<section class="w-100 h-100 section">
+  <div class="container-lg row mx-auto">
+    <div class="col-11 col-sm-6 col-lg-3 mx-auto">
+      <div class="rounded-3 px-5 py-4 d-flex flex-column justify-content-center align-items-center aboutBox animate gap-3">
+        <img src="/images/github.png" alt="about-nwb" class="w-50">
+        <p class="inter-600 text-20 text-center">Users & Developers</p>
+        <a href="" class="btn btn-outline-primary secondary border-secondary aboutBtn btn-lg scale animate">Get Started</a>
       </div>
     </div>
   </div>
 </section>
+{{/*  End About Section  */}}
+
+{{/*  Portfolio Section  */}}
+<section class="section w-100 h-100">
+  <div class="container-lg row mx-auto">
+    <div class="col-12 col-md-5 rounded-3">
+      <img src="/images/portfolio.png" alt="nwb-portfolio" class="w-100">
+    </div>
+    <div class="col-12 col-md-6">
+      <h3 class="inter-700 text-40">Neurodata Without Borders</h3>
+      <p class="text-16 inter-600 lh-base">Neurodata Without Borders (NWB) is a data standard for neurophysiology, providing neuroscientists with a common standard to share, archive, use, and build analysis tools for neurophysiology data. NWB is designed to store a variety of neurophysiology data, including data from intracellular and extracellular electrophysiology experiments, data from optical physiology experiments, and tracking and stimulus data.
+        The NWB team consists of neuroscientists and software developers who recognize that adoption of a unified data format is an important step toward breaking down the barriers to data sharing in neuroscience</p>
+      <div class="row">
+        <img src="/" alt="">
+      </div>
+    </div>
+  </div>
+</section>
+{{/*  End Portfolio Section  */}}
 {{ end }}
