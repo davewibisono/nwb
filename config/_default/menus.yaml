@@ -3,14 +3,14 @@ main:
   - name: "About"
     weight: 1
     hasChildren: true
-  - name: "About Us"
+  - name: "Our Services"
     weight: 1
     url: /
     parent: About
   - name: "Community"
     weight: 2
     hasChildren: true
-  - name: "Our Community"
+  - name: "Platform"
     weight: 1
     url: /
     parent: Community

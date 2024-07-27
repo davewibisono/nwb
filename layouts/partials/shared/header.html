@@ -1,16 +1,16 @@
-<nav class="navbar fixed-top bg-primary-neo py-3">
-  <nav class="container-xl">
+<nav class="navbar fixed-top bg-main-neo animate py-3" id="header">
+  <nav class="container-lg px-2 px-lg-0">
     <nav class="col-lg-3">
       <a href="/">
         <img src="{{ site.Params.logo }}" alt="nwb-logo" class="logoWidth">
       </a>
     </nav>
     <nav class="d-lg-none">
-      <i class="bi bi-list dark h1" id="menuBtn"></i>
+      <i class="bi bi-list darken h1" id="menuBtn"></i>
     </nav>
-    <nav class="col-lg-9 d-none d-lg-flex align-items-center toggleMenu flex-column flex-lg-row col-10 top-100 end-0 py-3 py-lg-0 top-lg-0 bg-primary" id="menu">
+    <nav class="col-lg-9 d-none d-lg-flex align-items-center toggleMenu flex-column flex-lg-row col-10 top-100 end-0 py-3 py-lg-0 top-lg-0 bg-main" id="menu">
       <nav class="col-lg-10 ps-lg-5 ms-xl-5">
-        <ul class="d-flex list-unstyled dark align-items-center flex-column flex-lg-row">
+        <ul class="d-flex list-unstyled darken align-items-center flex-column flex-lg-row">
           {{ range site.Menus.main }}
           {{ if .HasChildren }}
           <div class="dropdown">
@@ -18,9 +18,9 @@
               <span>
                 {{ .Name }}
               </span>
-              <img src="/images/essentials/down-arrow.png" alt="" class="down-arrow">
+              <img src="/images/essentials/down-arrow.png" alt="nwb-dropdown" class="down-arrow">
             </button>
-            <ul class="dropdown-menu bg-dark opacity-100">
+            <ul class="dropdown-menu bg-darken opacity-100">
               {{ range .Children }}
               <li><a class="dropdown-item text-center animate inter-400 nav-link underline-hover animate px-3" href="{{ .URL }}">{{ .Name }}</a></li>
               {{ end }}
@@ -32,9 +32,11 @@
           {{ end }}
         </ul>
       </nav>
+      {{ with site.Params.cta }}
       <nav class="col-lg-2">
-        <a href="" class="btn btn-primary btn-lg text-18 bg-secondary border-secondary inter-500 scale animate">Get Started</a>
+        <a href="{{ .link }}" class="btn btn-main btn-lg text-16 bg-second border-second inter-500 scale animate text-white">{{ .text }}</a>
       </nav>
+      {{ end }}
     </nav>
   </nav>
 </nav>

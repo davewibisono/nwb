@@ -1,2 +1,5 @@
 # Header
 logo: "/images/logo.png"
+cta:
+  text: "Get Started"
+  link: /

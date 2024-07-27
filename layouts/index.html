@@ -1,6 +1,8 @@
 {{ define "main" }}
-{{/*  Hero Section  */}}
-<section class="hero bg-primary">
+{{/* Hero Section */}}
+{{ with .Params.hero_section }}
+  {{ if .enable }}
+<section class="hero bg-main" id="hero">
   <div class="position-relative overflow-hidden w-100 h-100">
     <div>
       <img src="/images/essentials/circle.png" alt="nwb-home" class="w-25">
@@ -15,66 +17,236 @@
       <!-- Additional required wrapper -->
       <div class="swiper-wrapper">
         <!-- Slides -->
+        {{ range .slides }}
         <div class="swiper-slide d-flex flex-column justify-content-center flex-md-row-reverse align-items-center py-5">
           <div class="col-12 col-md-8 pb-5 pb-md-0 d-flex justify-content-center d-md-block z-1">
-              <img src="/images/hero.png" alt="nwb-home" class="heroImg">
+            <img src="/images/hero.png" alt="nwb-home" class="heroImg">
           </div>
           <div class="col-12 col-sm-8 col-md-4 ps-2 ps-md-0 z-2 d-flex flex-column gap-3">
-              <h1 class="inter-700 text-white text-48">Neurodata Without Borders: Neurophysiology Data Format</h1>
-              <p class="inter-500 dark-text text-18">Version 2.0 FINAL Now Available</p>
+            <h1 class="inter-700 text-white text-48-responsive">{{ .title }}</h1>
+            <p class="inter-500 dark-50 text-18">{{ .subtitle }}</p>
             <div>
-              <a href=""
-                class="btn btn-primary btn-lg text-18 bg-yellow border-yellow inter-500 translate animate">Read
-                More</a>
+              <a href="{{ .btn_link }}" class="btn btn-main btn-lg text-18 bg-yellow border-yellow inter-500 translate animate">{{ .btn_text }}</a>
             </div>
           </div>
         </div>
+        {{ end }}
       </div>
       <!-- If we need pagination -->
       <div class="swiper-pagination"></div>
     </div>
   </div>
 </section>
-{{/*  End Hero Section  */}}
+  {{ end }}
+{{ end }}
+{{/* End Hero Section */}}
 
-{{/*  Banner Section  */}}
+{{/* Banner Section */}}
+{{ with .Params.banner_section }}
+  {{ if .enable }}
 <section class="w-100 bg-sky">
   <div class="py-4 banner mx-auto">
-    <p class="inter-600 text-24 text-center mb-0">Making databases about the brain more usable and accessible for neuroscientists worldwide</p>
+    <p class="inter-600 text-24 text-center mb-0">{{ .title }}</p>
   </div>
 </section>
-{{/*  End Banner Section  */}}
+  {{ end }}
+{{ end }}
+{{/* End Banner Section */}}
 
 
-{{/*  About Section  */}}
+{{/* About Section */}}
+{{ with .Params.card_section }}
+  {{ if .enable }}
 <section class="w-100 h-100 section">
-  <div class="container-lg row mx-auto">
-    <div class="col-11 col-sm-6 col-lg-3 mx-auto">
-      <div class="rounded-3 px-5 py-4 d-flex flex-column justify-content-center align-items-center aboutBox animate gap-3">
-        <img src="/images/github.png" alt="about-nwb" class="w-50">
-        <p class="inter-600 text-20 text-center">Users & Developers</p>
-        <a href="" class="btn btn-outline-primary secondary border-secondary aboutBtn btn-lg scale animate">Get Started</a>
+  <div class="container-lg row mx-auto g-4">
+    {{ range .cards }}
+    <div class="col-12 col-sm-6 col-lg-3 mx-auto px-2">
+      <div
+        class="rounded-3 px-5 py-4 d-flex flex-column justify-content-center align-items-center aboutBox animate gap-3 h-100">
+        <img src="{{ .image }}" alt="about-nwb" class="w-50">
+        <p class="inter-600 text-20 text-center">{{ .title }}</p>
+        <a href="{{ .btn_link }}" class="btn btn-outline-main second border-second aboutBtn btn-lg scale animate">{{ .btn_text }}</a>
       </div>
     </div>
+    {{ end }}
   </div>
 </section>
-{{/*  End About Section  */}}
+  {{ end }}
+{{ end }}
+{{/* End About Section */}}
 
-{{/*  Portfolio Section  */}}
+{{/* Portfolio Section */}}
+{{ with .Params.portfolio_section }}
+  {{ if .enable }}
 <section class="section w-100 h-100">
-  <div class="container-lg row mx-auto">
+  <div class="container-lg row mx-auto justify-content-between">
     <div class="col-12 col-md-5 rounded-3">
-      <img src="/images/portfolio.png" alt="nwb-portfolio" class="w-100">
+      <img src="{{ .image }}" alt="nwb-portfolio" class="w-100">
     </div>
-    <div class="col-12 col-md-6">
-      <h3 class="inter-700 text-40">Neurodata Without Borders</h3>
-      <p class="text-16 inter-600 lh-base">Neurodata Without Borders (NWB) is a data standard for neurophysiology, providing neuroscientists with a common standard to share, archive, use, and build analysis tools for neurophysiology data. NWB is designed to store a variety of neurophysiology data, including data from intracellular and extracellular electrophysiology experiments, data from optical physiology experiments, and tracking and stimulus data.
-        The NWB team consists of neuroscientists and software developers who recognize that adoption of a unified data format is an important step toward breaking down the barriers to data sharing in neuroscience</p>
-      <div class="row">
-        <img src="/" alt="">
+    <div class="col-12 col-md-6 d-flex flex-column gap-4 ">
+      <h3 class="inter-700 text-40 mb-0">{{ .heading }}</h3>
+      {{ range .paragraph }}
+      <p class="text-16 inter-600 lh-base dark-700">{{ . }}</p>
+      {{ end }}
+      <div class="row g-3">
+        <div class="col-2">
+          <div class="p-1 shadow-sm rounded-3">
+            <img src="/images/portfolio-logo.png" alt="nwb-achivements" class="achiImg">
+          </div>
+        </div>
+      </div>
+      <div class="pt-3">
+        <a href="" class="btn btn-main btn-lg text-18 bg-main border-main inter-500 translate animate text-white">Learn
+          More</a>
+      </div>
+    </div>
+  </div>
+  </div>
+</section>
+  {{ end }}
+{{ end }}
+{{/* End Portfolio Section */}}
+
+{{/*  News And Updates Section  */}}
+{{ with .Params.news_section }}
+  {{ if .enable }}
+<section class="section w-100 h-100 newsSect">
+  <div class="container-lg d-flex flex-column gap-5">
+
+    <h2 class="text-white inter-700 text-40 text-center mb-0">Latest News & Updates</h2>
+
+    <div class="row g-4">
+
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="shadow">
+          <div class="h-60">
+            <img src="/images/news/nwb-newsletter.png" alt="nwb-newsletter" class="img-fluid  rounded-top-3">
+          </div>
+          <div class="h-40 p-4 bg-main rounded-bottom-3 d-flex flex-column gap-3">
+            <div class="d-flex gap-2 align-items-center">
+              <div class="icons">
+                <img src="/images/essentials/calender.png" alt="calender" class="img-fluid">
+              </div>
+              <p class="inter-400 text-14 slate mb-0 pt-1">August 30, 2022</p>
+            </div>
+            <div>
+              <h3 class="inter-600 text-20 dark-100">NWB Newsletter Summer 2022</h3>
+              <p class="inter-400 text-16 dark-300 mb-0">The Neurodata Without Borders Summer 2022 Newsletter is now available!</p>
+            </div>
+            <div>
+              <a href="" class="btn btn-main text-14 yellow bg-transparent border-transparent inter-400 scale animate p-0 border-0">
+                Read More
+                <img src="/images/essentials/arrow_right.png" alt="nwb_right_arrow" class="w-20">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="mx-auto">
+      <a href="{{ .btn_link }}" class="btn btn-outline-main text-18 yellow border-yellow aboutBtn btn-lg translate animate px-4">{{ .btn_text }}</a>
+    </div>
+
+  </div>
+</section>
+  {{ end }}
+{{ end }}
+{{/*  End News And Updates Section  */}}
+
+{{/*  Events Section  */}}
+{{ with .Params.event_section }}
+  {{ if .enable }}
+<section class="section">
+  <div class="container-lg d-flex flex-column gap-5">
+
+    <h2 class="inter-700 text-40 text-center mb-0">Upcoming Events</h2>
+
+    <div class="row g-4 justify-content-center">
+      {{ range .events }}
+      <div class="col-12 col-sm-6 col-lg-4">
+        <div class="aboutBox px-3 py-4 animate rounded-3">
+          <div class="d-flex flex-column flex-sm-row gap-3 pb-4 border-bottom ">
+            <div>
+              <div class="bg-main rounded-3 px-3 py-2 text-white d-inline-block text-center">
+                <h5 class="inter-600 text-24 mb-0">{{ .date | time.Format "02" }}</h5>
+                <p class="inter-500 text-14 mb-0">{{ .date | time.Format "January" }}</p>
+              </div>
+            </div>
+            <div>
+              <h4 class="inter-600 text-20">{{ .title }}</h4>
+              <div class="d-flex align-items-center gap-2">
+                <div class="icons">
+                  <img src="/images/essentials/clock.png" alt="" class="img-fluid">
+                </div>
+                <p class="inter-400 text-14 mb-0 pt-1 blue">{{ .time }}</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="pt-4 d-flex flex-column flex-lg-row row-gap-3 justify-content-between">
+            <div class="d-flex gap-1 align-items-center">
+              <div class="fixedImg">
+                <img src="/images/essentials/clients.png" alt="nwb-clients" class="img-fluid">
+              </div>
+              <p class="inter-400 text-14 mb-0 dark-600">{{ .attenders }} attenders</p>
+            </div>
+            <div>
+              <a href="{{ .btn_link }}" class="btn btn-sm btn-outline-main yellow border-yellow text-18 px-4 eventsBtn btn-lg scale animate">{{ .btn_text }}</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+
+  </div>
+</section>
+  {{ end }}
+{{ end }}
+{{/*  End Events Section  */}}
+
+{{/*  Sponsers Section  */}}
+{{ with .Params.sponsers_section }}
+  {{ if .enable }}
+<section class="w-100 h-100">
+  <div class="border-top container-lg py-5">
+    <h3 class="inter-600 text-24 text-center">Current Sponsors</h3>
+
+    <div class="logo-slider">
+      <div class="logos">
+        {{ range .logos }}
+        <div class="logo clients">
+          <a href="{{ .link }}" target="_blank">
+            <img src="{{ .image }}" alt="Logo 1">
+          </a>
+        </div>
+        {{ end }}
+      </div>
+  </div>
+  </div>
+</section>
+  {{ end }}
+{{ end }}
+{{/*  End Sponsers Section  */}}
+
+{{/*  CTA  */}}
+{{ with .Params.cta_section }}
+  {{ if .enable }}
+<section class="ctaSect w-100 py-5">
+  <div class="container-lg">
+    <div class="row row-gap-4">
+      <div class="col-12 col-sm-6">
+        <p class="inter-700 text-40 text-white">{{ .heading }}</p>
+      </div>
+      <div class="col-12 col-sm-6 justify-content-sm-end d-flex align-items-center">
+        <a href="{{ .btn_link }}" class="btn btn-main bg-second btn-lg px-4 text-white text-18 second border-second translate animate">{{ .btn_text }}</a>
       </div>
     </div>
   </div>
 </section>
-{{/*  End Portfolio Section  */}}
+  {{ end }}
+{{ end }}
+{{/*  End CTA  */}}
 {{ end }}

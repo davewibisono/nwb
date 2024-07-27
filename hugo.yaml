@@ -1,3 +1,15 @@
 baseURL: http://example.org/
 languageCode: en
 title: My New Hugo Site
+
+# Markup 
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+
+# Modules
+module:
+  mounts:
+    - source: "assets"
+      target: "assets"
