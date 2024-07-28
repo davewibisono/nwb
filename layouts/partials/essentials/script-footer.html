@@ -11,6 +11,6 @@
 {{ $js = $js | fingerprint }}
 {{ end }}  
 
- <script src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }} defer></script>
+<script src="{{ $js.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }} defer></script>
 {{ $script := resources.Get "js/main.js" | fingerprint | minify }}
-<script src="{{ $script.RelPermalink }}"></script>
+<script src="{{ $script.RelPermalink }}" {{ if hugo.IsProduction }}integrity="{{ $js.Data.Integrity }}"{{ end }} def></script>

@@ -18,7 +18,7 @@
 {{/*  Styles  */}}
 {{ $plugin := slice }}
 {{ $plugin := $plugin | append (resources.Get "scss/plugins.scss" | resources.ExecuteAsTemplate "plugins.scss" . | toCSS) }}
-{{ $plugin := $plugin | resources.Concat "/css/bootstrap.css" }}
+{{ $plugin := $plugin | resources.Concat "/css/plugins.css" }}
 
 {{ if hugo.IsProduction }}
   {{ $plugin = $plugin | resources.PostCSS | fingerprint "sha256" }}
@@ -26,9 +26,10 @@
 {{ end }}
 <link rel="stylesheet" href="{{ $plugin.RelPermalink }}" />
 
-
-{{ $style := resources.Get "css/style.css" | fingerprint | minify }}
-<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ $styles := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
+{{ with resources.Get "css/style.css" | fingerprint | minify }}
+<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/plugins.css" }}
 {{ with resources.Get "scss/plugins.scss" | toCSS $opts | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
