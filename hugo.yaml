@@ -1,6 +1,6 @@
-baseURL: http://example.org/
-languageCode: en
-title: My New Hugo Site
+baseURL: "https://66a614a114950a0008be3155--statuesque-alfajores-380f39.netlify.app/"
+languageCode: "en"
+title: "My New Hugo Site"
 
 # Markup 
 markup:
