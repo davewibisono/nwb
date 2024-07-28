@@ -64,7 +64,4 @@ document.addEventListener('DOMContentLoaded', function () {
       dynamicBullets: true,
     },
   });
-
-  // AOS Init
-  AOS.init();
 });
