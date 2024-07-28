@@ -1,7 +1,7 @@
 {{ define "main" }}
 {{/* Hero Section */}}
 {{ with .Params.hero_section }}
-  {{ if .enable }}
+{{ if .enable }}
 <section class="hero bg-main" id="hero">
   <div class="position-relative overflow-hidden w-100 h-100">
     <div>
@@ -26,7 +26,9 @@
             <h1 class="inter-700 text-white text-48-responsive">{{ .title }}</h1>
             <p class="inter-500 dark-50 text-18">{{ .subtitle }}</p>
             <div>
-              <a href="{{ .btn_link }}" class="btn btn-main btn-lg text-18 bg-yellow border-yellow inter-500 translate animate">{{ .btn_text }}</a>
+              <a href="{{ .btn_link }}"
+                class="btn btn-main btn-lg text-18 bg-yellow border-yellow inter-500 translate animate">{{ .btn_text
+                }}</a>
             </div>
           </div>
         </div>
@@ -37,26 +39,26 @@
     </div>
   </div>
 </section>
-  {{ end }}
+{{ end }}
 {{ end }}
 {{/* End Hero Section */}}
 
 {{/* Banner Section */}}
 {{ with .Params.banner_section }}
-  {{ if .enable }}
+{{ if .enable }}
 <section class="w-100 bg-sky">
   <div class="py-4 banner mx-auto">
     <p class="inter-600 text-24 text-center mb-0">{{ .title }}</p>
   </div>
 </section>
-  {{ end }}
+{{ end }}
 {{ end }}
 {{/* End Banner Section */}}
 
 
 {{/* About Section */}}
 {{ with .Params.card_section }}
-  {{ if .enable }}
+{{ if .enable }}
 <section class="w-100 h-100 section">
   <div class="container-lg row mx-auto g-4">
     {{ range .cards }}
@@ -65,19 +67,20 @@
         class="rounded-3 px-5 py-4 d-flex flex-column justify-content-center align-items-center aboutBox animate gap-3 h-100">
         <img src="{{ .image }}" alt="about-nwb" class="w-50">
         <p class="inter-600 text-20 text-center">{{ .title }}</p>
-        <a href="{{ .btn_link }}" class="btn btn-outline-main second border-second aboutBtn btn-lg scale animate">{{ .btn_text }}</a>
+        <a href="{{ .btn_link }}" class="btn btn-outline-main second border-second aboutBtn btn-lg scale animate">{{
+          .btn_text }}</a>
       </div>
     </div>
     {{ end }}
   </div>
 </section>
-  {{ end }}
+{{ end }}
 {{ end }}
 {{/* End About Section */}}
 
 {{/* Portfolio Section */}}
 {{ with .Params.portfolio_section }}
-  {{ if .enable }}
+{{ if .enable }}
 <section class="section w-100 h-100">
   <div class="container-lg row mx-auto justify-content-between">
     <div class="col-12 col-md-5 rounded-3">
@@ -103,13 +106,13 @@
   </div>
   </div>
 </section>
-  {{ end }}
+{{ end }}
 {{ end }}
 {{/* End Portfolio Section */}}
 
-{{/*  News And Updates Section  */}}
+{{/* News And Updates Section */}}
 {{ with .Params.news_section }}
-  {{ if .enable }}
+{{ if .enable }}
 <section class="section w-100 h-100 newsSect">
   <div class="container-lg d-flex flex-column gap-5">
 
@@ -131,10 +134,12 @@
             </div>
             <div>
               <h3 class="inter-600 text-20 dark-100">NWB Newsletter Summer 2022</h3>
-              <p class="inter-400 text-16 dark-300 mb-0">The Neurodata Without Borders Summer 2022 Newsletter is now available!</p>
+              <p class="inter-400 text-16 dark-300 mb-0">The Neurodata Without Borders Summer 2022 Newsletter is now
+                available!</p>
             </div>
             <div>
-              <a href="" class="btn btn-main text-14 yellow bg-transparent border-transparent inter-400 scale animate p-0 border-0">
+              <a href=""
+                class="btn btn-main text-14 yellow bg-transparent border-transparent inter-400 scale animate p-0 border-0">
                 Read More
                 <img src="/images/essentials/arrow_right.png" alt="nwb_right_arrow" class="w-20">
               </a>
@@ -146,18 +151,20 @@
     </div>
 
     <div class="mx-auto">
-      <a href="{{ .btn_link }}" class="btn btn-outline-main text-18 yellow border-yellow aboutBtn btn-lg translate animate px-4">{{ .btn_text }}</a>
+      <a href="{{ .btn_link }}"
+        class="btn btn-outline-main text-18 yellow border-yellow aboutBtn btn-lg translate animate px-4">{{ .btn_text
+        }}</a>
     </div>
 
   </div>
 </section>
-  {{ end }}
 {{ end }}
-{{/*  End News And Updates Section  */}}
+{{ end }}
+{{/* End News And Updates Section */}}
 
-{{/*  Events Section  */}}
+{{/* Events Section */}}
 {{ with .Params.event_section }}
-  {{ if .enable }}
+{{ if .enable }}
 <section class="section">
   <div class="container-lg d-flex flex-column gap-5">
 
@@ -193,7 +200,9 @@
               <p class="inter-400 text-14 mb-0 dark-600">{{ .attenders }} attenders</p>
             </div>
             <div>
-              <a href="{{ .btn_link }}" class="btn btn-sm btn-outline-main yellow border-yellow text-18 px-4 eventsBtn btn-lg scale animate">{{ .btn_text }}</a>
+              <a href="{{ .btn_link }}"
+                class="btn btn-sm btn-outline-main yellow border-yellow text-18 px-4 eventsBtn btn-lg scale animate">{{
+                .btn_text }}</a>
             </div>
           </div>
         </div>
@@ -203,18 +212,18 @@
 
   </div>
 </section>
-  {{ end }}
 {{ end }}
-{{/*  End Events Section  */}}
+{{ end }}
+{{/* End Events Section */}}
 
-{{/*  Sponsers Section  */}}
+{{/* Sponsers Section */}}
 {{ with .Params.sponsers_section }}
-  {{ if .enable }}
+{{ if .enable }}
 <section class="w-100 h-100">
   <div class="border-top container-lg py-5">
     <h3 class="inter-600 text-24 text-center">Current Sponsors</h3>
 
-    <div class="logo-slider">
+    <div class="logo-slider py-4">
       <div class="logos">
         {{ range .logos }}
         <div class="logo clients">
@@ -224,16 +233,16 @@
         </div>
         {{ end }}
       </div>
-  </div>
+    </div>
   </div>
 </section>
-  {{ end }}
 {{ end }}
-{{/*  End Sponsers Section  */}}
+{{ end }}
+{{/* End Sponsers Section */}}
 
-{{/*  CTA  */}}
+{{/* CTA */}}
 {{ with .Params.cta_section }}
-  {{ if .enable }}
+{{ if .enable }}
 <section class="ctaSect w-100 py-5">
   <div class="container-lg">
     <div class="row row-gap-4">
@@ -241,12 +250,14 @@
         <p class="inter-700 text-40 text-white">{{ .heading }}</p>
       </div>
       <div class="col-12 col-sm-6 justify-content-sm-end d-flex align-items-center">
-        <a href="{{ .btn_link }}" class="btn btn-main bg-second btn-lg px-4 text-white text-18 second border-second translate animate">{{ .btn_text }}</a>
+        <a href="{{ .btn_link }}"
+          class="btn btn-main bg-second btn-lg px-4 text-white text-18 second border-second translate animate">{{
+          .btn_text }}</a>
       </div>
     </div>
   </div>
 </section>
-  {{ end }}
 {{ end }}
-{{/*  End CTA  */}}
+{{ end }}
+{{/* End CTA */}}
 {{ end }}

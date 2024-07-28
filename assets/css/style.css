@@ -15,6 +15,10 @@
   color: #114B7C !important;
 }
 
+.darken-main {
+  color: #071A2B !important;
+}
+
 .slate {
   color: #A0A4AD !important;
 }
@@ -61,6 +65,10 @@
 
 .bg-darken {
   background-color: #d2d3d6 !important;
+}
+
+.bg-darken-main {
+  background-color: #071A2B !important;
 }
 
 .bg-second {
@@ -158,7 +166,8 @@
 /* Animation */
 .underline-hover:hover {
   text-decoration: underline !important;
-  text-underline-offset: 10px !important;
+  text-underline-offset: 7px !important;
+  filter: brightness(1.4);
 }
 
 .animate {
@@ -431,6 +440,16 @@
 /* CTA */
 .ctaSect {
   display: table;
-  background: linear-gradient(#05223AE5, #072742, #052037E5 ), url('/images/essentials/ctaBg.png');
-  background-position: center top;
+  background: url('/images/essentials/ctaBg.png'), #114B7C;
+  background-position: center center;
+}
+
+/* Footer */
+.footer-dots {
+  right: -300px !important;
+  bottom: 5px !important;
+}
+
+.footer-padi {
+  padding: 100px 0;
 }

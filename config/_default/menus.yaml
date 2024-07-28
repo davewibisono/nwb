@@ -20,3 +20,55 @@ main:
   - name: "Policies"
     weight: 4
     url: /
+
+# Footer
+### About
+about:
+  - name: "About NWB"  
+    weight: 1
+    url: "/"
+  - name: "The Software Ecosystem"
+    weight: 2
+    url: "/"
+  - name: "Team"
+    weight: 3
+    url: "/"
+  - name: "Publications"
+    weight: 4
+    url: "/"
+  - name: "Contact Us"
+    weight: 5
+    url: "/"
+
+### Community
+community:
+  - name: "News"
+    weight: 1
+    url: "/"
+  - name: "Events"
+    weight: 2
+    url: "/"
+  - name: "Analysis and Visualization Tools.<br>NWB Enhancement Proposals"
+    weight: 3
+    url: "/"
+  - name: "(remove Public Datagete)"
+    weight: 4
+    url: "/"
+  - name: "(remove Labs Using NWB)"
+    weight: 5
+    url: "/"
+  - name: "Grants and Projects"
+    weight: 6
+    url: "/"
+  - name: "Working Groups"
+    weight: 7
+    url: "/"
+
+### Legal
+legal: 
+  - name: "Privacy Plicy"
+    weight: 1
+    url: "/"
+  - name: "Terms of Use"
+    weight: 2
+    url: "/"

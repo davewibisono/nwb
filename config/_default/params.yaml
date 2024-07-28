@@ -3,3 +3,7 @@ logo: "/images/logo.png"
 cta:
   text: "Get Started"
   link: /
+
+# Footer
+footer_logo: "/images/colored-logo.png"
+copyright_text: "© Neurodata Without Borders - All Rights Reserved"
