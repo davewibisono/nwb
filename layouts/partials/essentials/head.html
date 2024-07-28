@@ -26,8 +26,10 @@
 {{ end }}
 <link rel="stylesheet" href="{{ $plugin.RelPermalink }}" />
 
-{{- $styles := resources.Get "css/style.css" -}}
-<link rel="stylesheet" href="{{ $styles.Permalink | absURL }}">
+{{ $styles := dict "transpiler" "libsass" "targetPath" "css/styles.css" }}
+{{ with resources.Get "css/style.css" | minify | fingerprint }}
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+{{ end }}
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/plugins.css" }}
 {{ with resources.Get "scss/plugins.scss" | toCSS $opts | minify | fingerprint }}
   <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
