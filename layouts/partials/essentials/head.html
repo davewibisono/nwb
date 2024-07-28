@@ -28,8 +28,8 @@
 
 
 {{ $style := resources.Get "css/style.css" | fingerprint | minify }}
-<link rel="stylesheet" href="{{ $style.Permalink }}">
+<link rel="stylesheet" href="{{ $style.RelPermalink }}">
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/plugins.css" }}
 {{ with resources.Get "scss/plugins.scss" | toCSS $opts | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ .Permalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 {{ end }}
