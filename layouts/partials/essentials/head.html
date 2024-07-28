@@ -28,9 +28,9 @@
 
 {{ $styles := dict "transpiler" "libsass" "targetPath" "css/style.css" }}
 {{ with resources.Get "css/style.css" | fingerprint | minify }}
-<link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+<link rel="stylesheet" href="{{ site.BaseURL }}{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 {{ end }}
 {{ $opts := dict "transpiler" "libsass" "targetPath" "css/plugins.css" }}
 {{ with resources.Get "scss/plugins.scss" | toCSS $opts | minify | fingerprint }}
-  <link rel="stylesheet" href="{{ site.BaseURL }}{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
+  <link rel="stylesheet" href="{{ .RelPermalink }}" integrity="{{ .Data.Integrity }}" crossorigin="anonymous">
 {{ end }}
