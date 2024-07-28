@@ -2,7 +2,7 @@
 {{/* Hero Section */}}
 {{ with .Params.hero_section }}
 {{ if .enable }}
-<section class="hero bg-main" id="hero">
+<section class="hero bg-main heroSection">
   <div class="position-relative overflow-hidden w-100 h-100">
     <div>
       <img src="/images/essentials/circle.png" alt="nwb-home" class="w-25">
@@ -23,12 +23,11 @@
             <img src="/images/hero.png" alt="nwb-home" class="heroImg">
           </div>
           <div class="col-12 col-sm-8 col-md-4 ps-2 ps-md-0 z-2 d-flex flex-column gap-3">
-            <h1 class="inter-700 text-white text-48-responsive">{{ .title }}</h1>
-            <p class="inter-500 dark-50 text-18">{{ .subtitle }}</p>
+            <h1 class="inter-700 text-white text-48-responsive">{{ .title | markdownify }}</h1>
+            <p class="inter-500 dark-50 text-18">{{ .subtitle | markdownify  }}</p>
             <div>
               <a href="{{ .btn_link }}"
-                class="btn btn-main btn-lg text-18 bg-yellow border-yellow inter-500 translate animate">{{ .btn_text
-                }}</a>
+                class="btn btn-main btn-lg text-18 bg-yellow border-yellow inter-500 translate animate">{{ .btn_text }}</a>
             </div>
           </div>
         </div>
@@ -48,7 +47,7 @@
 {{ if .enable }}
 <section class="w-100 bg-sky">
   <div class="py-4 banner mx-auto">
-    <p class="inter-600 text-24 text-center mb-0">{{ .title }}</p>
+    <p class="inter-600 text-24 text-center mb-0">{{ .title | markdownify }}</p>
   </div>
 </section>
 {{ end }}
@@ -66,7 +65,7 @@
       <div
         class="rounded-3 px-5 py-4 d-flex flex-column justify-content-center align-items-center aboutBox animate gap-3 h-100">
         <img src="{{ .image }}" alt="about-nwb" class="w-50">
-        <p class="inter-600 text-20 text-center">{{ .title }}</p>
+        <p class="inter-600 text-20 text-center">{{ .title | markdownify }}</p>
         <a href="{{ .btn_link }}" class="btn btn-outline-main second border-second aboutBtn btn-lg scale animate">{{
           .btn_text }}</a>
       </div>
@@ -87,9 +86,9 @@
       <img src="{{ .image }}" alt="nwb-portfolio" class="w-100">
     </div>
     <div class="col-12 col-md-6 d-flex flex-column gap-4 ">
-      <h3 class="inter-700 text-40 mb-0">{{ .heading }}</h3>
+      <h3 class="inter-700 text-40 mb-0">{{ .heading | markdownify }}</h3>
       {{ range .paragraph }}
-      <p class="text-16 inter-600 lh-base dark-700">{{ . }}</p>
+      <p class="text-16 inter-600 lh-base dark-700">{{ . | markdownify }}</p>
       {{ end }}
       <div class="row g-3">
         <div class="col-2">
@@ -182,12 +181,12 @@
               </div>
             </div>
             <div>
-              <h4 class="inter-600 text-20">{{ .title }}</h4>
+              <h4 class="inter-600 text-20">{{ .title | markdownify }}</h4>
               <div class="d-flex align-items-center gap-2">
                 <div class="icons">
                   <img src="/images/essentials/clock.png" alt="" class="img-fluid">
                 </div>
-                <p class="inter-400 text-14 mb-0 pt-1 blue">{{ .time }}</p>
+                <p class="inter-400 text-14 mb-0 pt-1 blue">{{ .time | markdownify }}</p>
               </div>
             </div>
           </div>
@@ -197,7 +196,7 @@
               <div class="fixedImg">
                 <img src="/images/essentials/clients.png" alt="nwb-clients" class="img-fluid">
               </div>
-              <p class="inter-400 text-14 mb-0 dark-600">{{ .attenders }} attenders</p>
+              <p class="inter-400 text-14 mb-0 dark-600">{{ .attenders | markdownify }} attenders</p>
             </div>
             <div>
               <a href="{{ .btn_link }}"
@@ -247,7 +246,7 @@
   <div class="container-lg">
     <div class="row row-gap-4">
       <div class="col-12 col-sm-6">
-        <p class="inter-700 text-40 text-white">{{ .heading }}</p>
+        <p class="inter-700 text-40 text-white">{{ .heading | markdownify }}</p>
       </div>
       <div class="col-12 col-sm-6 justify-content-sm-end d-flex align-items-center">
         <a href="{{ .btn_link }}"

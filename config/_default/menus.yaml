@@ -3,17 +3,51 @@ main:
   - name: "About"
     weight: 1
     hasChildren: true
-  - name: "Our Services"
+  - name: "About NWB"
     weight: 1
-    url: /
+    url: "/about-us"
     parent: About
+  - name: "The Software Ecosystem"
+    weight: 2
+    url: "/"
+    parent: About
+  - name: "Team"
+    weight: 3
+    url: "/"
+    parent: About
+  - name: "Publications"
+    weight: 4
+    url: "/"
+    parent: About
+  - name: "Contact Us"
+    weight: 5
+    url: "/"
+    parent: About
+  
   - name: "Community"
     weight: 2
     hasChildren: true
-  - name: "Platform"
+  - name: "News"
     weight: 1
     url: /
     parent: Community
+  - name: "Events"
+    weight: 2
+    url: /
+    parent: Community
+  - name: "A/V Tools"
+    weight: 3
+    url: /
+    parent: Community
+  - name: "Grants and Projects"
+    weight: 4
+    url: /
+    parent: Community
+  - name: "Working Groups"
+    weight: 5
+    url: /
+    parent: Community
+
   - name: "Using NWB"
     weight: 3
     url: /

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
   let menuBtn = document.getElementById('menuBtn');
   let menu = document.getElementById('menu');
   let header = document.getElementById('header');
-  let hero = document.getElementById('hero');
+  let hero = document.querySelectorAll('.heroSection');
   const logos = document.querySelector('.clients');
 
   // Menu Toggle
@@ -18,7 +18,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
   // Header Background Change On Scroll
   window.addEventListener('scroll', function () {
-    let heroBottom = hero.getBoundingClientRect().bottom;
+    let heroBottom = Array.from(hero).reduce((minBottom, hero) => {
+      return Math.min(minBottom, hero.getBoundingClientRect().bottom);
+    }, Number.POSITIVE_INFINITY);
     if (header.getBoundingClientRect().top <= heroBottom) {
       header.classList.add('bg-main-neo');
       header.classList.remove('bg-main');
@@ -62,4 +64,7 @@ document.addEventListener('DOMContentLoaded', function () {
       dynamicBullets: true,
     },
   });
+
+  // AOS Init
+  AOS.init();
 });
