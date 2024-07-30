@@ -95,6 +95,30 @@
   background-color: transparent !important;
 }
 
+.bg-dark-50 {
+  background-color: #EBEBEB !important;
+}
+
+.bg-dark-100 {
+  background-color: #FBFBFB !important;
+}
+
+.bg-dark-300 {
+  background-color: #D2D3D6 !important;
+}
+
+.bg-dark-600 {
+  background-color: #585C67 !important;
+}
+
+.bg-dark-700 {
+  background-color: #374151 !important;
+}
+
+.bg-dark-900 {
+  background-color: #171B26 !important;
+}
+
 .border-main {
   border-color: #1a1f3029 !important;
 }
@@ -203,6 +227,10 @@
 
 .mainSect {
   padding: 200px 0;
+}
+
+.shadow-inner{
+  box-shadow: inset 0 2px 2px 0 rgb(0 0 0 / 0.05) !important;
 }
 
 .w-5 {
@@ -492,4 +520,34 @@
 
 .mark {
   width: 16px !important;
+}
+
+/* Software Page */
+/* Hero */
+.softwareSect {
+  background: radial-gradient(#063053e5, #062e52e5 ), url('/images/essentials/softwareBg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.typeBox {
+  width: 32px !important;
+}
+
+.softwareSectA a {
+  color: #D17128 !important;
+  text-decoration: none !important;
+  list-style-type: circle !important;
+}
+
+.softwareSectA a::before {
+  content: '\2022' !important;
+  font-size: 1.1em !important;
+  margin-right: 5px !important;
+}
+
+.fixedHeight {
+  height: 464px !important;
+  width: fit-content !important;
 }

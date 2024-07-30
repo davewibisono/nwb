@@ -9,7 +9,7 @@ main:
     parent: About
   - name: "The Software Ecosystem"
     weight: 2
-    url: "/"
+    url: "/nwb-software"
     parent: About
   - name: "Team"
     weight: 3
@@ -60,10 +60,10 @@ main:
 about:
   - name: "About NWB"  
     weight: 1
-    url: "/"
+    url: "/about-us"
   - name: "The Software Ecosystem"
     weight: 2
-    url: "/"
+    url: "/nwb-software"
   - name: "Team"
     weight: 3
     url: "/"
