@@ -1,6 +1,7 @@
 # Header
 logo: "/images/logo.png"
 cta:
+  enable: true
   text: "Get Started"
   link: /
 

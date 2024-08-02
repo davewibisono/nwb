@@ -5,23 +5,23 @@ main:
     hasChildren: true
   - name: "About NWB"
     weight: 1
-    url: "/about-us"
+    url: "about-us/"
     parent: About
   - name: "The Software Ecosystem"
     weight: 2
-    url: "/nwb-software"
+    url: "nwb-software/"
     parent: About
   - name: "Team"
     weight: 3
-    url: "/"
+    url: "/team"
     parent: About
   - name: "Publications"
     weight: 4
-    url: "/"
+    url: "/publications"
     parent: About
   - name: "Contact Us"
     weight: 5
-    url: "/"
+    url: "/contact-us"
     parent: About
   
   - name: "Community"
@@ -29,31 +29,31 @@ main:
     hasChildren: true
   - name: "News"
     weight: 1
-    url: /
+    url: "/news"
     parent: Community
   - name: "Events"
     weight: 2
-    url: /
+    url: "/events"
     parent: Community
   - name: "A/V Tools"
     weight: 3
-    url: /
+    url: "/av-tools"
     parent: Community
   - name: "Grants and Projects"
     weight: 4
-    url: /
+    url: "/grants-projects"
     parent: Community
   - name: "Working Groups"
     weight: 5
-    url: /
+    url: "/working-groups"
     parent: Community
 
   - name: "Using NWB"
     weight: 3
-    url: /
+    url: "/"
   - name: "Policies"
     weight: 4
-    url: /
+    url: "/polices"
 
 # Footer
 ### About
@@ -66,25 +66,25 @@ about:
     url: "/nwb-software"
   - name: "Team"
     weight: 3
-    url: "/"
+    url: "/team"
   - name: "Publications"
     weight: 4
-    url: "/"
+    url: "/publications"
   - name: "Contact Us"
     weight: 5
-    url: "/"
+    url: "/contact-us"
 
 ### Community
 community:
   - name: "News"
     weight: 1
-    url: "/"
+    url: "/news"
   - name: "Events"
     weight: 2
-    url: "/"
+    url: "/events"
   - name: "Analysis and Visualization Tools.<br>NWB Enhancement Proposals"
     weight: 3
-    url: "/"
+    url: "/analysis"
   - name: "(remove Public Datagete)"
     weight: 4
     url: "/"
@@ -93,16 +93,16 @@ community:
     url: "/"
   - name: "Grants and Projects"
     weight: 6
-    url: "/"
+    url: "/grants-projects"
   - name: "Working Groups"
     weight: 7
-    url: "/"
+    url: "/working-groups"
 
 ### Legal
 legal: 
-  - name: "Privacy Plicy"
+  - name: "Privacy Policy"
     weight: 1
-    url: "/"
+    url: "/privacy-policy"
   - name: "Terms of Use"
     weight: 2
-    url: "/"
+    url: "/terms-of-use"
