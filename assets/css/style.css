@@ -583,3 +583,36 @@ header {
   height: 464px !important;
   width: fit-content !important;
 }
+
+/* Team Page */
+/* Hero */
+.teamSect {
+  background: radial-gradient(#063053e5, #062e52e5), url('/images/essentials/teamBg.png');
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.ellipseW {
+  width: 1000px !important;
+}
+
+.ellipses {
+  bottom: -500px !important;
+}
+
+@media (max-width: 992px) {
+  .ellipseW {
+    width: 700px !important;
+  }
+
+  .ellipses {
+    top: 450px !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .ellipses {
+    display: none;
+  }
+}
