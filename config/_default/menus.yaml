@@ -53,7 +53,7 @@ main:
     url: "/"
   - name: "Policies"
     weight: 4
-    url: "/polices"
+    url: "privacy-policy/"
 
 # Footer
 ### About
@@ -84,7 +84,7 @@ community:
     url: "/events"
   - name: "Analysis and Visualization Tools.<br>NWB Enhancement Proposals"
     weight: 3
-    url: "/analysis"
+    url: "/av-tools"
   - name: "(remove Public Datagete)"
     weight: 4
     url: "/"

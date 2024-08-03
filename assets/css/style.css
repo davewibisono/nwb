@@ -19,6 +19,10 @@
   color: #114B7C !important;
 }
 
+#blue {
+  color: #114B7C !important;
+}
+
 .darken-main {
   color: #071A2B !important;
 }
@@ -176,6 +180,15 @@
 /* Fonts */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap");
 
+/* Variables */
+:root {
+  --inter-400: 400;
+  --inter-500: 500;
+  --inter-600: 600;
+  --inter-700: 700;
+  --inter-900: 900;
+}
+
 .inter-400 {
   font-family: "Inter", sans-serif !important;
   font-optical-sizing: auto !important;
@@ -286,6 +299,12 @@ select:focus {
   outline: none !important;
 }
 
+.content h1, h2, h3, h4, h5, h6 {
+  color: #171B26 !important;
+  font-family: "Inter", sans-serif !important;
+  font-weight: var(--inter-700);
+}
+
 .content a {
   color: #D17128 !important;
   text-decoration: none !important;
@@ -298,6 +317,10 @@ select:focus {
 
 .content img {
   width: 100% !important;
+}
+
+.content li::marker {
+  color: #D17128 !important;
 }
 
 .content img[src$='#center'] {
