@@ -286,6 +286,33 @@ select:focus {
   outline: none !important;
 }
 
+.content a {
+  color: #D17128 !important;
+  text-decoration: none !important;
+}
+
+.content a:hover {
+  text-decoration: underline !important;
+  text-underline-offset: 5px !important;
+}
+
+.content img {
+  width: 100% !important;
+}
+
+.content img[src$='#center'] {
+  display: block !important;
+  margin: 1.0rem auto !important;
+  max-width: 75% !important;
+  height: auto !important;
+}
+
+@media (max-width: 768px) {
+  .content img[src$='#center'] {
+    max-width: 100% !important;
+  }
+}
+
 /* Header */
 header {
   position: fixed !important;
@@ -591,7 +618,6 @@ header {
 .softwareSectA a {
   color: #D17128 !important;
   text-decoration: none !important;
-  list-style-type: circle !important;
 }
 
 .softwareSectA a::before {
