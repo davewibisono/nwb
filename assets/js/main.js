@@ -33,6 +33,15 @@ document.addEventListener("DOMContentLoaded", function () {
     console.error('Header element with class "header" not found.');
   }
 
+  // Swiper Init
+  const swiper = new Swiper(".swiper", {
+    loop: true,
+    pagination: {
+      el: ".swiper-pagination",
+      dynamicBullets: true,
+    },
+  });
+
   if (logos) {
     // Sponsors Slider
     let startX;
@@ -145,14 +154,5 @@ document.addEventListener("DOMContentLoaded", function () {
     if (visibleCountTech < teamMembersTech.length) {
       showMoreButtonTech.classList.remove("d-none");
     }
-  });
-
-  // Swiper Init
-  const swiper = new Swiper(".swiper", {
-    loop: true,
-    pagination: {
-      el: ".swiper-pagination",
-      dynamicBullets: true,
-    },
   });
 });
