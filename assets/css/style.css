@@ -243,6 +243,10 @@
 }
 
 /* Global */
+.hero {
+  height: 560px !important;
+}
+
 .section {
   padding: 150px 0 !important;
 }
@@ -416,8 +420,8 @@ header {
 /* Home  */
 
 /* Hero */
-.hero {
-  height: 560px !important;
+.homeHero {
+  height: 750px !important;
 }
 
 .heroDots {
