@@ -35,6 +35,10 @@
   color: #C3E4FF !important;
 }
 
+.slate {
+  color: #737780 !important;
+}
+
 .dark-50 {
   color: #EBEBEB !important;
 }
@@ -42,6 +46,7 @@
 .dark-100 {
   color: #FBFBFB !important;
 }
+
 
 .dark-300 {
   color: #D2D3D6 !important;
@@ -129,6 +134,10 @@
 
 .border-yellow {
   border-color: #FF9900 !important;
+}
+
+.border-dark-50 {
+  border-color: #EBEBEB !important;
 }
 
 .border-transparent {
@@ -265,6 +274,18 @@
   height: 40% !important;
 }
 
+input:focus {
+  outline: transparent !important;
+}
+
+textarea:focus {
+  outline: none !important;
+}
+
+select:focus {
+  outline: none !important;
+}
+
 /* Header */
 header {
   position: fixed !important;
@@ -346,7 +367,7 @@ header {
 
 /* Hero */
 .hero {
-  height: 760px !important;
+  height: 560px !important;
 }
 
 .heroDots {
@@ -587,18 +608,17 @@ header {
 /* Team Page */
 /* Hero */
 .teamSect {
-  background: radial-gradient(#063053e5, #062e52e5), url('/images/essentials/teamBg.png');
-  background-position: center center;
-  background-size: cover;
-  background-repeat: no-repeat;
+  background-position: center center !important;
+  background-size: cover !important;
+  background-repeat: no-repeat !important;
 }
 
 .ellipseW {
-  width: 1000px !important;
+  width: 700px !important;
 }
 
 .ellipses {
-  bottom: -500px !important;
+  bottom: -350px !important;
 }
 
 .rotatedIcon {
@@ -623,4 +643,21 @@ header {
   .ellipses {
     display: none;
   }
+}
+
+/* Publication */
+.sideLink:hover .filter-icon {
+  filter: invert(51%) sepia(34%) saturate(2113%) hue-rotate(351deg) brightness(91%) contrast(79%);
+}
+
+.sideLink:hover {
+  box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
+}
+
+.active-tab {
+  border-left: 1px solid #D17128 !important;
+}
+
+.active-text {
+  filter: invert(51%) sepia(34%) saturate(2113%) hue-rotate(351deg) brightness(91%) contrast(79%);
 }

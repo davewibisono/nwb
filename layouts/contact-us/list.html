@@ -1,0 +1,89 @@
+{{ define "main" }}
+{{/* Hero Section */}}
+<section class="hero teamSect d-flex justify-content-center align-items-center position-relative" style="background: radial-gradient(#063053e5, #062e52e5), url('/images/essentials/publicationsBg.png');">
+    <h1 class="inter-700 text-48 text-white text-center z-4">{{ .Title | markdownify }}</h1>
+    <div class="position-absolute ellipses">
+        <img src="/images/essentials/ellipses.png" alt="" class="ellipseW">
+    </div>
+</section>
+{{/* End Hero Section */}}
+
+{{/* Community Section */}}
+{{ with .Params.community_section }}
+{{ if .enable }}
+<section class="section bg-dark-100">
+    <div class="container-lg">
+        <h3 class="inter-700 text-40 dark-900 mb-3">{{ .title | markdownify }}</h3>
+        <p class="inter-400 text-16 dark-700 lh-base">{{ .content | markdownify }}</p>
+        <div class="row g-4 justify-content-center pt-4">
+            {{ range .boxes }}
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="bg-white h-100 rounded-3 p-4 shadow-sm">
+                    <div class="d-flex flex-column row-gap-4">
+                        <img src="{{ .image }}" alt="" width="40">
+                        <div class="">
+                            <h5 class="inter-700 text-18 dark-900 mb-2">{{ .title | markdownify }}</h5>
+                            <p class="inter-400 text-14 dark-700">{{ .content | markdownify }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            {{ end }}
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{/* End Community Section */}}
+
+{{/*  Form Section  */}}
+{{ with .Params.form }}
+{{ if .enable }}
+<section class="bg-white section">
+    <div class="container-lg">
+        <div class="row justify-content-center gy-5 justify-content-lg-between">
+            <div class="col-10 col-md-8 col-lg-4">
+                <div class="text-center text-lg-start softwareSectA">
+                    <h3 class="inter-700 text-36 dark-900">{{ .title | markdownify }}</h3>
+                    {{ range .content }}
+                    <p class="inter-400 text-16 dark-700">{{ . | markdownify }}</p>
+                    {{ end }}
+                </div>
+            </div>
+
+            <div class="col-11 col-sm-7 px-0">
+                <form action="" class="d-flex flex-column row-gap-4">
+                    <div class="row">
+                        <label for="name" class="px-0 inter-400 text-16 dark-900 mb-2">Full Name</label>
+                        <input type="text" id="name" class="border-dark-50 border p-3 rounded-3 inter-400 text-16 slate" placeholder="Enter your name here">
+                    </div>
+
+                    <div class="row">
+                        <label for="email" class="px-0 inter-400 text-16 dark-900 mb-2">Email</label>
+                        <input type="email" id="email" class="border-dark-50 border p-3 rounded-3 inter-400 text-16 slate" placeholder="Enter your email here">
+                    </div>
+
+                    <div class="row">
+                        <label for="subject" class="px-0 inter-400 text-16 dark-900 mb-2">Subject</label>
+                        <select class="border-dark-50 border p-3 rounded-3 inter-400 text-16 slate" id="subject">
+                            <option selected>Select Subject</option>
+                          </select>
+                    </div>
+
+                    <div class="row">
+                        <label for="message" class="px-0 inter-400 text-16 dark-900 mb-2">Message</label>
+                        <textarea id="message" class="border-dark-50 border p-3 rounded-3 inter-400 text-16 slate" placeholder="Enter your message here"></textarea>
+                    </div>
+
+                    <div class="px-0">
+                        <a href="" class="btn btn-primary btn-lg bg-second border-second animate translate">Just Send</a>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}
+{{ end }}
+{{/*  End Form Section  */}}
+{{ end }}

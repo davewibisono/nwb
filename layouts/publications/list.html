@@ -1,0 +1,30 @@
+{{ define "main" }}
+{{/* Hero Section */}}
+<section class="hero teamSect d-flex justify-content-center align-items-center position-relative" style="background: radial-gradient(#063053e5, #062e52e5), url('/images/essentials/publicationsBg.png');">
+    <h1 class="inter-700 text-48 text-white text-center z-4">{{ .Title | markdownify }}</h1>
+    <div class="position-absolute ellipses">
+        <img src="/images/essentials/ellipses.png" alt="" class="ellipseW">
+    </div>
+</section>
+{{/* End Hero Section */}}
+
+{{/*  Main Section  */}}
+{{/*  <section class="w-100 bg-dark-100 section">
+    <div class="container-lg">
+        <div class="row g-5">
+            <div class="col-8 col-md-2 px-0">
+                <div class="d-flex flex-column row-gap-3">
+                    {{ $currentPage := .Permalink }}
+                    <a href="/" class='bg-white rounded-3 shadow-sm px-3 py-2 d-flex align-items-center gap-2 nav-link sideLink {{ if eq "/" $currentPage }} active-tab shadow-lg {{ end }}'>
+                        <div class="">
+                            <img src="/images/publications/icons/citing.png" alt="" width="20" class="filter-icon animate {{ if eq .Permalink $currentPage }}active-text{{ end }}">
+                        </div>
+                        <span class="inter-400 dark-700 text-16 mb-0 pt-1 filter-icon animate {{ if eq .Permalink $currentPage }}active-text{{ end }}">Citing NWB</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>  */}}
+{{/*  End Main Section  */}}
+{{ end }}

@@ -13,11 +13,11 @@ main:
     parent: About
   - name: "Team"
     weight: 3
-    url: "/team"
+    url: "team/"
     parent: About
   - name: "Publications"
     weight: 4
-    url: "/publications"
+    url: "publications/"
     parent: About
   - name: "Contact Us"
     weight: 5
