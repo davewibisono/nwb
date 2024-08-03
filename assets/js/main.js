@@ -1,22 +1,32 @@
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener("DOMContentLoaded", function () {
   // References
-  const logos = document.querySelector('.clients');
-  const header = document.querySelector('.header');
-  const hero = document.querySelectorAll('.hero');
+  const logos = document.querySelector(".clients");
+  const header = document.querySelector(".header");
+  const hero = document.querySelectorAll(".hero");
+  const showMoreButton = document.getElementById("show-more");
+  const showLessButton = document.getElementById("show-less");
+  const teamMembers = document.querySelectorAll(".team-member");
+  const showMoreButtonTech = document.getElementById("show-more-tech");
+  const showLessButtonTech = document.getElementById("show-less-tech");
+  const teamMembersTech = document.querySelectorAll(".team-member-tech");
+  let visibleCount = 8;
+  const increment = 4;
+  let visibleCountTech = 8;
+  const incrementTech = 4;
 
   // Header Background Change On Scroll
   if (header) {
-    window.addEventListener('scroll', function () {
+    window.addEventListener("scroll", function () {
       let heroBottom = Array.from(hero).reduce((minBottom, hero) => {
         return Math.min(minBottom, hero.getBoundingClientRect().bottom);
       }, Number.POSITIVE_INFINITY);
-  
+
       if (header.getBoundingClientRect().top <= heroBottom) {
-        header.classList.add('bg-main-neo');
-        header.classList.remove('bg-main');
+        header.classList.add("bg-main-neo");
+        header.classList.remove("bg-main");
       } else {
-        header.classList.add('bg-main');
-        header.classList.remove('bg-main-neo');
+        header.classList.add("bg-main");
+        header.classList.remove("bg-main-neo");
       }
     });
   } else {
@@ -24,34 +34,118 @@ document.addEventListener('DOMContentLoaded', function () {
   }
 
   if (logos) {
-  // Sponsors Slider
-  let startX;
-  let scrollLeft;
+    // Sponsors Slider
+    let startX;
+    let scrollLeft;
 
-  logos.addEventListener('mousedown', (e) => {
-    startX = e.pageX - logos.offsetLeft;
-    scrollLeft = logos.scrollLeft;
-    logos.classList.add('active');
+    logos.addEventListener("mousedown", (e) => {
+      startX = e.pageX - logos.offsetLeft;
+      scrollLeft = logos.scrollLeft;
+      logos.classList.add("active");
+    });
+
+    logos.addEventListener("mouseleave", () => {
+      logos.classList.remove("active");
+    });
+
+    logos.addEventListener("mouseup", () => {
+      logos.classList.remove("active");
+    });
+
+    logos.addEventListener("mousemove", (e) => {
+      if (!logos.classList.contains("active")) return;
+      e.preventDefault();
+      const x = e.pageX - logos.offsetLeft;
+      const walk = (x - startX) * 2; // Scroll-fast
+      logos.scrollLeft = scrollLeft - walk;
+    });
+  } else {
+  }
+
+  // Show More Team Members
+
+  // Current Team
+  showMoreButton.addEventListener("click", function () {
+    const nextCount = visibleCount + increment;
+    for (let i = visibleCount; i < nextCount && i < teamMembers.length; i++) {
+      if (teamMembers[i]) {
+      teamMembers[i].classList.remove("d-none");
+      }
+    }
+    visibleCount = nextCount;
+
+    if (visibleCount > 8) {
+      showLessButton.classList.remove("d-none");
+    }
+
+    if (visibleCount >= teamMembers.length) {
+      showMoreButton.classList.add("d-none");
+    }
   });
 
-  logos.addEventListener('mouseleave', () => {
-    logos.classList.remove('active');
+  showLessButton.addEventListener("click", function() {
+    // Calculate the next set of members to hide
+    const nextCount = visibleCount - increment;
+    for (let i = visibleCount - 1; i >= nextCount && i >= 8; i--) {
+      if (teamMembers[i]) {
+        teamMembers[i].classList.add("d-none");
+      }
+    }
+    visibleCount = nextCount;
+
+    // Hide the "Show Less" button if only 8 members are visible
+    if (visibleCount <= 8) {
+      showLessButton.classList.add("d-none");
+    }
+
+    // Show the "Show More" button if not all members are visible
+    if (visibleCount < teamMembers.length) {
+      showMoreButton.classList.remove("d-none");
+    }
   });
 
-  logos.addEventListener('mouseup', () => {
-    logos.classList.remove('active');
+  // Tech Team
+  showMoreButtonTech.addEventListener("click", function() {
+    // Calculate the next set of members to show
+    const nextCountTech = visibleCountTech + incrementTech;
+    for (let i = visibleCountTech; i < nextCountTech && i < teamMembersTech.length; i++) {
+      if (teamMembersTech[i]) {
+        teamMembersTech[i].classList.remove("d-none");
+      }
+    }
+    visibleCountTech = nextCountTech;
+
+    // Show the "Show Less" button if more than 8 members are visible
+    if (visibleCountTech > 8) {
+      showLessButtonTech.classList.remove("d-none");
+    }
+
+    // Hide the "Show More" button if all members are visible
+    if (visibleCountTech >= teamMembersTech.length) {
+      showMoreButtonTech.classList.add("d-none");
+    }
   });
 
-  logos.addEventListener('mousemove', (e) => {
-    if (!logos.classList.contains('active')) return;
-    e.preventDefault();
-    const x = e.pageX - logos.offsetLeft;
-    const walk = (x - startX) * 2; // Scroll-fast
-    logos.scrollLeft = scrollLeft - walk;
+  showLessButtonTech.addEventListener("click", function() {
+    // Calculate the next set of members to hide
+    const nextCountTech = visibleCountTech - incrementTech;
+    for (let i = visibleCountTech - 1; i >= nextCountTech && i >= 8; i--) {
+      if (teamMembersTech[i]) {
+        teamMembersTech[i].classList.add("d-none");
+      }
+    }
+    visibleCountTech = nextCountTech;
+
+    // Hide the "Show Less" button if only 8 members are visible
+    if (visibleCountTech <= 8) {
+      showLessButtonTech.classList.add("d-none");
+    }
+
+    // Show the "Show More" button if not all members are visible
+    if (visibleCountTech < teamMembersTech.length) {
+      showMoreButtonTech.classList.remove("d-none");
+    }
   });
-} else {
-  
-}
 
   // Swiper Init
   const swiper = new Swiper(".swiper", {

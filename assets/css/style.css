@@ -601,6 +601,14 @@ header {
   bottom: -500px !important;
 }
 
+.rotatedIcon {
+  rotate: 180deg !important;
+}
+
+.teamImg {
+  height: 300px !important;
+}
+
 @media (max-width: 992px) {
   .ellipseW {
     width: 700px !important;
