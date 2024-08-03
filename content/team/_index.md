@@ -26,47 +26,47 @@ executive_section:
 current_team_section:
     enable: true
     team_members:
-        - image: "/images/kris.png"
+        - image: "/images/team/kris.png"
           name: "Kris Bouchard"
-        - image: "/images/bing.png"
+        - image: "/images/team/bing.png"
           name: "Bing Brunton"
-        - image: "/images/elizabeth.png"
+        - image: "/images/team/elizabeth.png"
           name: "Elizabeth Buffalo"
-        - image: "/images/anne.png"
+        - image: "/images/team/anne.png"
           name: "Anne Churchland"
-        - image: "/images/loren.png"
+        - image: "/images/team/loren.png"
           name: "Loren Frank"
-        - image: "/images/satrajit.png"
+        - image: "/images/team/satrajit.png"
           name: "Satrajit Ghost"
-        - image: "/images/Adam.png"
+        - image: "/images/team/Adam.png"
           name: "Adam Kepecs"
-        - image: "/images/mala.png"
+        - image: "/images/team/mala.png"
           name: "Mala Murthy"
         # Extra
-        - image: "/images/kris.png"
+        - image: "/images/team/kris.png"
           name: "Kris Bouchard"
-        - image: "/images/bing.png"
+        - image: "/images/team/bing.png"
           name: "Bing Brunton"
 
 ### Alumni Section
 alumni_section:
     enable: true
     alumni:
-        - image: "/images/lydia.png"
+        - image: "/images/team/lydia.png"
           name: "Kris Bouchard"
           date: "(April 2020 – May 2021, Co-PI 1R24MH116922-01)"
-        - image: "/images/christof.png"
+        - image: "/images/team/christof.png"
           name: "Christof Koch"
           date: "(August 2017 – April 2020, NWB founding member)"
-        - image: "/images/fredrich.png"
+        - image: "/images/team/fredrich.png"
           name: "Friedrich Sommer"
           date: "(August 2017 – August 2019, NWB founding member)"
-        - image: "/images/karel.png"
+        - image: "/images/team/karel.png"
           name: "Karel Svoboda"
           date: "(August 2017 – 2020, NWB founding member)"
-        - image: "/images/markus.png"
+        - image: "/images/team/markus.png"
           name: "Markus Meister"
-        - image: "/images/katrin.png"
+        - image: "/images/team/katrin.png"
           name: "Katrin Amunts"
 
 ### Technical Board 
@@ -84,28 +84,28 @@ technical_board:
 technical_team_section:
     enable: true
     team_members:
-        - image: "/images/alessio.png"
+        - image: "/images/team/alessio.png"
           name: "Alessio Buccino"
-        - image: "/images/saskia.png"
+        - image: "/images/team/saskia.png"
           name: "Saskia de Vries"
-        - image: "/images/yaroslav.png"
+        - image: "/images/team/yaroslav.png"
           name: "Yaroslav Halchenko"
-        - image: "/images/ryan.png"
+        - image: "/images/team/ryan.png"
           name: "Ryan Ly"
-        - image: "/images/lawrence.png"
+        - image: "/images/team/lawrence.png"
           name: "Lawrence Niu"
-        - image: "/images/kushal.png"
+        - image: "/images/team/kushal.png"
           name: "Kushal Bakshi"
-        - image: "/images/anna.png"
+        - image: "/images/team/anna.png"
           name: "Anna (Szonja) Weigl"
         # Extra
-        - image: "/images/alessio.png"
+        - image: "/images/team/alessio.png"
           name: "Alessio Buccino"
-        - image: "/images/saskia.png"
+        - image: "/images/team/saskia.png"
           name: "Saskia de Vries"
-        - image: "/images/yaroslav.png"
+        - image: "/images/team/yaroslav.png"
           name: "Yaroslav Halchenko"
-        - image: "/images/ryan.png"
+        - image: "/images/team/ryan.png"
 
 ### Core Dev Section
 core_dev_section:
