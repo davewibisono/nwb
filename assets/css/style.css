@@ -31,6 +31,7 @@
   color: #A0A4AD !important;
 }
 
+
 .yellow {
   color: #FF9900 !important;
 }
@@ -39,7 +40,7 @@
   color: #C3E4FF !important;
 }
 
-.slate {
+.lighter {
   color: #737780 !important;
 }
 
@@ -78,6 +79,10 @@
 
 .bg-main-neo {
   background-color: #1a1f3029 !important;
+}
+
+.bg-slate {
+  background-color: #F5F5F5 !important;
 }
 
 .bg-darken {
@@ -161,6 +166,10 @@
   font-size: 14px !important;
 }
 
+.text-16 {
+  font-size: 16px !important;
+}
+
 .text-24 {
   font-size: 24px !important;
 }
@@ -173,8 +182,8 @@
   font-size: 40px !important;
 }
 
-.text-16 {
-  font-size: 16px !important;
+.text-36 {
+  font-size: 36px !important;
 }
 
 /* Fonts */
@@ -301,6 +310,11 @@ textarea:focus {
 
 select:focus {
   outline: none !important;
+}
+
+li {
+  font-family: var(--inter-400);
+  font-family: "Inter", sans-serif !important;
 }
 
 .content h1, h2, h3, h4, h5, h6 {
@@ -705,12 +719,19 @@ header {
 
 .sideLink:hover {
   box-shadow: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1) !important;
-}
-
-.active-tab {
   border-left: 1px solid #D17128 !important;
 }
 
 .active-text {
   filter: invert(51%) sepia(34%) saturate(2113%) hue-rotate(351deg) brightness(91%) contrast(79%);
+}
+
+.listImg {
+  width: 318px !important;
+}
+
+@media (max-width: 576px) {
+  .listImg {
+    width: 100% !important;
+  }
 }

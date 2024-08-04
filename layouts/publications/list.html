@@ -1,6 +1,7 @@
 {{ define "main" }}
 {{/* Hero Section */}}
-<section class="hero teamSect d-flex justify-content-center align-items-center position-relative" style="background: radial-gradient(#063053e5, #062e52e5), url('/images/essentials/publicationsBg.png');">
+<section class="hero teamSect d-flex justify-content-center align-items-center position-relative"
+    style="background: radial-gradient(#063053e5, #062e52e5), url('/images/essentials/publicationsBg.png');">
     <h1 class="inter-700 text-48 text-white text-center z-4">{{ .Title | markdownify }}</h1>
     <div class="position-absolute ellipses">
         <img src="/images/essentials/ellipses.png" alt="" class="ellipseW">
@@ -8,23 +9,95 @@
 </section>
 {{/* End Hero Section */}}
 
-{{/*  Main Section  */}}
-{{/*  <section class="w-100 bg-dark-100 section">
+{{/* Main Section */}}
+<section class="w-100 bg-dark-100 section">
     <div class="container-lg">
-        <div class="row g-5">
-            <div class="col-8 col-md-2 px-0">
-                <div class="d-flex flex-column row-gap-3">
-                    {{ $currentPage := .Permalink }}
-                    <a href="/" class='bg-white rounded-3 shadow-sm px-3 py-2 d-flex align-items-center gap-2 nav-link sideLink {{ if eq "/" $currentPage }} active-tab shadow-lg {{ end }}'>
+        <div class="row gy-5 justify-content-center justify-content-lg-between">
+
+            <div class="d-none d-lg-block" style="width: 280px !important;">
+                {{ $list := .Params.navigation }}
+                {{ $len := len $list }}
+
+                {{ range $i, $p := $list }}
+                <div
+                    class="d-flex flex-column row-gap-3 my-2 {{ if eq $i 0 }}mt-0{{ end }} {{ if eq (add $i 1) $len }}mb-0{{ end }}">
+                    <a href=""
+                        class='bg-white rounded-3 shadow-sm px-3 py-2 d-flex align-items-center gap-2 nav-link sideLink'>
+                        {{ with $p.icon }}
                         <div class="">
-                            <img src="/images/publications/icons/citing.png" alt="" width="20" class="filter-icon animate {{ if eq .Permalink $currentPage }}active-text{{ end }}">
+                            <img src="{{ . }}" alt="" width="20"
+                                class="filter-icon animate">
                         </div>
-                        <span class="inter-400 dark-700 text-16 mb-0 pt-1 filter-icon animate {{ if eq .Permalink $currentPage }}active-text{{ end }}">Citing NWB</span>
+                        {{ end }}
+                        <span class="inter-400 dark-700 text-16 mb-0 pt-1 filter-icon animate">{{ $p.title | markdownify }}</span>
                     </a>
                 </div>
+                {{ end }}
+            </div>
+
+            <div class="col-12 col-sm-11 col-lg-8 col-xl-9 d-flex flex-column row-gap-5">
+                {{ range .Params.sections }}
+                {{ if .socials }}
+                <div class="rounded-3 p-2 p-sm-5 shadow-sm bg-white">
+                    <div class="row justify-content-between">
+                        <div>
+                            <h3 class="inter-700 text-36 dark-900 mb-3">{{ .title | markdownify }}</h3>
+                        </div>
+                        <div class="row row-gap-4">
+                            {{ range .boxes }}
+                            <div class="col-12 col-md-6">
+                                <div class="border-dark-50 border rounded-3 p-3 h-100">
+                                    {{ with .icon }}
+                                    <div class="rounded-3 bg-slate p-3 d-inline-block mb-3">
+                                        <img src="{{ . }}" alt="" width="24">
+                                    </div>
+                                    {{ end }}
+                                    <h4 class="inter-600 text-18 dark-700 mb-0">{{ .title | markdownify }}</h4>
+                                    <p class="inter-400 text-14 dark-700 pt-1">{{ .content | markdownify }}</p>
+                                </div>
+                            </div>
+                            {{ end }}
+                        </div>
+                    </div>
+                </div>
+                {{ else }}
+                <div class="rounded-3 p-2 p-sm-5 shadow-sm bg-white">
+                    <div class="row justify-content-between softwareSectA {{ if .main_image }}flex-column-reverse{{ end }} flex-md-row">
+                        <div class="{{ if .main_image }}col-md-6{{ end }}">
+                            <h3 class="inter-700 text-36 dark-900 mb-3">{{ .title | markdownify }}</h3>
+                            {{ if .content }}
+                            <p class="inter-400 text-16 dark-700">{{ .content | markdownify }}</p>
+                            {{ end }}
+                            {{ if .list }}
+                            {{ range .list }}
+                            <div class="d-flex gap-3 text-break">
+                                <div>
+                                    <img src="/images/publications/icons/marker.png" alt="" width="16">
+                                </div>
+                                <div>
+                                    <p class="inter-400 text-16 dark-700">{{ .content | markdownify }}</p>
+                                </div>
+                            </div>
+                            {{ with .image }}
+                            <div class="ms-4 mb-3">
+                                <img src="{{ . }}" alt="" class="listImg">
+                            </div>
+                            {{ end }}
+                            {{ end }}
+                            {{ end }}
+                        </div>
+                        {{ with .main_image }}
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <img src="{{ . }}" alt="" class="img-fluid rounded-3">
+                        </div>
+                        {{ end }}
+                    </div>
+                </div>
+                {{ end }}
+                {{ end }}
             </div>
         </div>
     </div>
-</section>  */}}
-{{/*  End Main Section  */}}
+</section>
+{{/* End Main Section */}}
 {{ end }}
