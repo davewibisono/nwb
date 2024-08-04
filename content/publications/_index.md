@@ -5,7 +5,7 @@ title: "Publications"
 navigation:
     - title: "Citing NWB"
       icon: "/images/publications/icons/citing.png"
-    - title: "Onine and Social Media"
+    - title: "Online and Social Media"
       icon: "/images/publications/icons/online.png"
     - title: "Papers"
       icon: "/images/publications/icons/paper.png"

@@ -19,9 +19,11 @@
                 {{ $len := len $list }}
 
                 {{ range $i, $p := $list }}
+                {{ $trimed := replaceRE "(\\s)" "" $p.title }}
+                {{ $link := lower $trimed }}
                 <div
                     class="d-flex flex-column row-gap-3 my-2 {{ if eq $i 0 }}mt-0{{ end }} {{ if eq (add $i 1) $len }}mb-0{{ end }}">
-                    <a href=""
+                    <a href="#{{ $link }}"
                         class='bg-white rounded-3 shadow-sm px-3 py-2 d-flex align-items-center gap-2 nav-link sideLink'>
                         {{ with $p.icon }}
                         <div class="">
@@ -37,8 +39,10 @@
 
             <div class="col-12 col-sm-11 col-lg-8 col-xl-9 d-flex flex-column row-gap-5">
                 {{ range .Params.sections }}
+                {{ $trimed := replaceRE "(\\s)" "" .title }}
+                {{ $link := lower $trimed }}
                 {{ if .socials }}
-                <div class="rounded-3 p-2 p-sm-5 shadow-sm bg-white">
+                <div class="rounded-3 p-2 p-sm-5 shadow-sm bg-white" id="{{ $link }}">
                     <div class="row justify-content-between">
                         <div>
                             <h3 class="inter-700 text-36 dark-900 mb-3">{{ .title | markdownify }}</h3>
@@ -61,7 +65,7 @@
                     </div>
                 </div>
                 {{ else }}
-                <div class="rounded-3 p-2 p-sm-5 shadow-sm bg-white">
+                <div class="rounded-3 p-2 p-sm-5 shadow-sm bg-white" id="{{ $link }}">
                     <div class="row justify-content-between softwareSectA {{ if .main_image }}flex-column-reverse{{ end }} flex-md-row">
                         <div class="{{ if .main_image }}col-md-6{{ end }}">
                             <h3 class="inter-700 text-36 dark-900 mb-3">{{ .title | markdownify }}</h3>
