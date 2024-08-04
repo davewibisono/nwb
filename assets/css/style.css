@@ -206,6 +206,13 @@
   font-variation-settings: "slnt" 0 !important;
 }
 
+.italic-400 {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: italic;
+}
+
 .inter-500 {
   font-family: "Inter", sans-serif !important;
   font-optical-sizing: auto !important;
@@ -734,4 +741,24 @@ header {
   .listImg {
     width: 100% !important;
   }
+}
+
+/* Grants and Projects */
+.dateLi::marker {
+  font-size: 26px;
+  color: #D17128;
+}
+
+.myLi::marker {
+  color: #114B7C90 !important;
+  font-size: 22px;
+}
+
+.sponserLink {
+  text-decoration: none;
+}
+
+.sponserLink:hover {
+  color: #D17128 !important;
+  text-decoration: underline;
 }

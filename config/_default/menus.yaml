@@ -41,7 +41,7 @@ main:
     parent: Community
   - name: "Grants and Projects"
     weight: 4
-    url: "/grants-projects"
+    url: "/grants-and-projects"
     parent: Community
   - name: "Working Groups"
     weight: 5
@@ -93,7 +93,7 @@ community:
     url: "/"
   - name: "Grants and Projects"
     weight: 6
-    url: "/grants-projects"
+    url: "/grants-and-projects"
   - name: "Working Groups"
     weight: 7
     url: "/working-groups"
