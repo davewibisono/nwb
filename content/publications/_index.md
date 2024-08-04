@@ -1,26 +1,17 @@
 ---
 title: "Publications"
 
-
-navigation:
-    - title: "Citing NWB"
-      icon: "/images/publications/icons/citing.png"
-    - title: "Online and Social Media"
-      icon: "/images/publications/icons/online.png"
-    - title: "Papers"
-      icon: "/images/publications/icons/paper.png"
-    - title: "Awards"
-      icon: "/images/publications/icons/awards.png"
-    - title: "Project Reports"
-      icon: "/images/publications/icons/report.png"
+# Section
 
 sections: 
     - title: "Citing NWB"
+      icon: "/images/publications/icons/citing.png"
       content: "If you are using NWB in your research, please use the following citation to acknowledge its use: <br><br> Oliver Rübel, Andrew Tritt, Ryan Ly, Benjamin K. Dichter, Satrajit Ghosh, Lawrence Niu, Pamela Baker, Ivan Soltesz, Lydia Ng, Karel Svoboda, Loren Frank, Kristofer E. Bouchard,  The Neurodata Without Borders ecosystem for neurophysiological data science, Oct. 2022,  eLife 11:e78362. <br><br>
       https://doi.org/10.7554/eLife.78362"
       main_image: "/images/publications/citing.png"
 
     - title: "Online and Social Media"
+      icon: "/images/publications/icons/online.png"
       socials: true
       boxes:
         - icon: "/images/publications/icons/youtube.png"
@@ -31,6 +22,7 @@ sections:
           content: "Follow NWB on twitter"
 
     - title: "Papers"
+      icon: "/images/publications/icons/paper.png"
       list:
         - content: "Oliver Rübel, Andrew Tritt, Ryan Ly, Benjamin K. Dichter, Satrajit Ghosh, Lawrence Niu, Pamela Baker, Ivan Soltesz, Lydia Ng, Karel Svoboda, Loren Frank, Kristofer E. Bouchard,  The Neurodata Without Borders ecosystem for neurophysiological data science, Oct. 2022,  eLife 11:e78362. https://doi.org/10.7554/eLife.78362  (bioRxiv preprint: https://doi.org/10.1101/2021.03.13.435173)"
         - content: "D. Eke, A. Bernard, J. G. Bjaalie, R. Chavarriaga, T. Hanakawa, A. Hannan, S. Hill, M. E. Martone, A. McMahon, O. Rübel, E. Thiels, and F. Pestilli, “International Data Governance for Neuroscience,” Neuron, Dec. 2021, ISSN 0896-6273,  doi: https://doi.org/10.1016/j.neuron.2021.11.017  (PsyArXiv Preprint: doi: https://doi.org/10.31234/osf.io/esz9b"
@@ -39,6 +31,7 @@ sections:
         - content: "Rübel, O., Tritt, A., Dichter, B., Braun, T., Cain, N., Clack, N., Davidson, T. J., Dougherty, M., Fillion-Robin, J.-C., Graddis, N., Grauer, M., Kiggins, J. T., Niu, L., Ozturk, D., Schroeder, W., Soltesz, I., Sommer, F. T., Svoboda, K., Ng, L., Frank, L. M., Bouchard, K. NWB:N 2.0: An Accessible Data Standard for Neurophysiology. January, 2019, doi: https://doi.org/10.1101/523035, (bioRxiv preprint)"
 
     - title: "Awards"
+      icon: "/images/publications/icons/awards.png"
       list:
         - content: "2019 R&D 100 winner, Software/Services <a href=''>(Article)</a>"
           image: "/images/publications/rnd.png"
@@ -46,6 +39,7 @@ sections:
           image: "/images/publications/incf.png"
     
     - title: "Project Reports"
+      icon: "/images/publications/icons/report.png"
       list: 
         - content: "Benjamin Dichter, Oliver R ̈ubel, Ryan Ly, Satrajit Ghosh, Jerome Lecoq, Saskia de Vries, Carly Kiselycznyk, Kaitlyn Casimo, and Stephanie Albin, “Report: Neurodata Rehack: Generating new insights from existing neurophysiology data through secondary analysis: October 3-5, 2022” Online Technical Report, January 2023, <br><br> <a href=''>(PDF) (LaTeX)</a>"
         - content: "Oliver Rübel, Benjamin Dichter, Ryan Ly , “Report: 2022 NWB Users Days at HHMI Janelia 13th NWB Hackathon: July 25 – 27, 2022,” Online Technical Report, August 2022 <br><br> <a href=''>(PDF) (LaTeX)</a>"
