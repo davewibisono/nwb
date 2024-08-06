@@ -732,8 +732,7 @@ header {
 
 /* Publication */
 .sideLink:hover .filter-icon {
-  filter: invert(51%) sepia(34%) saturate(2113%) hue-rotate(351deg)
-    brightness(91%) contrast(79%);
+  filter: invert(51%) sepia(34%) saturate(2113%) hue-rotate(351deg) brightness(91%) contrast(79%);
 }
 
 .sideLink:hover {
@@ -743,8 +742,7 @@ header {
 }
 
 .active-text {
-  filter: invert(51%) sepia(34%) saturate(2113%) hue-rotate(351deg)
-    brightness(91%) contrast(79%);
+  filter: invert(51%) sepia(34%) saturate(2113%) hue-rotate(351deg) brightness(91%) contrast(79%);
 }
 
 .listImg {
@@ -779,4 +777,10 @@ header {
 
 .customPadii {
   margin-left: 32px;
+}
+
+
+/* Working Groups */
+.workingSection {
+  padding: 80px 0 !important;
 }

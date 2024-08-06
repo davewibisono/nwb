@@ -24,10 +24,11 @@
           </div>
           <div class="col-12 col-sm-8 col-md-4 ps-2 ps-md-0 z-2 d-flex flex-column gap-3">
             <h1 class="inter-700 text-white text-48-responsive">{{ .title | markdownify }}</h1>
-            <p class="inter-500 dark-50 text-18">{{ .subtitle | markdownify  }}</p>
+            <p class="inter-500 dark-50 text-18">{{ .subtitle | markdownify }}</p>
             <div>
               <a href="{{ .btn_link }}"
-                class="btn btn-main btn-lg text-18 bg-yellow border-yellow inter-500 translate animate">{{ .btn_text }}</a>
+                class="btn btn-main btn-lg text-18 bg-yellow border-yellow inter-500 translate animate">{{ .btn_text
+                }}</a>
             </div>
           </div>
         </div>
@@ -69,7 +70,7 @@
           <p class="inter-600 text-20 text-center mb-0">{{ .title | markdownify }}</p>
         </div>
         <a href="{{ .btn_link }}" class="btn btn-outline-main second border-second aboutBtn btn-lg scale animate">{{
-            .btn_text }}</a>
+          .btn_text }}</a>
       </div>
     </div>
     {{ end }}
@@ -93,11 +94,13 @@
       <p class="text-16 inter-600 lh-base dark-700">{{ . | markdownify }}</p>
       {{ end }}
       <div class="row g-3">
+        {{ range .logos }}
         <div class="col-2">
           <div class="p-1 shadow-sm rounded-3">
-            <img src="/images/portfolio-logo.png" alt="nwb-achivements" class="achiImg">
+            <img src="{{ . }}" alt="nwb-achivements" class="achiImg">
           </div>
         </div>
+        {{ end }}
       </div>
       <div class="pt-3">
         <a href="" class="btn btn-main btn-lg text-18 bg-main border-main inter-500 translate animate text-white">Learn

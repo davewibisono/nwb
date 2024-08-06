@@ -52,6 +52,9 @@ portfolio_section:
   paragraph: 
     - "Neurodata Without Borders (NWB) is a data standard for neurophysiology, providing neuroscientists with a common standard to share, archive, use, and build analysis tools for neurophysiology data. NWB is designed to store a variety of neurophysiology data, including data from intracellular and extracellular electrophysiology experiments, data from optical physiology experiments, and tracking and stimulus data."
     - "The NWB team consists of neuroscientists and software developers who recognize that adoption of a unified data format is an important step toward breaking down the barriers to data sharing in neuroscience"
+  logos:
+    - "/images/portfolio-logo.png"
+    - "/images/publications/incf.png"
 
 # News
 news_section:
