@@ -710,8 +710,29 @@ header {
   rotate: 180deg !important;
 }
 
-.teamImg {
-  height: 300px !important;
+.titleHeight {
+  height: 25% !important;
+}
+
+.boxHeight {
+  height: 85% !important;
+}
+
+
+@media (max-width: 992px) {
+  .boxHeight {
+    height: 80% !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .titleHeight {
+    height: auto !important;
+  }
+
+  .boxHeight {
+    height: auto !important;
+  }
 }
 
 @media (max-width: 992px) {
