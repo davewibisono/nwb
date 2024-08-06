@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function () {
       }
     });
   } else {
-    console.error('Header element with class "header" not found.');
+    console.error('Element with class "header" not found.');
   }
 
   // Swiper Init
@@ -71,6 +71,44 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
   }
 
+  document.querySelectorAll(".col-sm-10.col-md-10").forEach(section => {
+    section.querySelectorAll("#show-more-box").forEach(showMoreBtn => {
+      showMoreBtn.addEventListener("click", function () {
+        let yearSection = this.closest("div[id]");
+        let hiddenBoxes = yearSection.querySelectorAll(".box.d-none");
+
+        for (let i = 0; i < 4 && i < hiddenBoxes.length; i++) {
+          hiddenBoxes[i].classList.remove("d-none");
+        }
+
+        if (hiddenBoxes.length <= 4) {
+          this.classList.add("d-none");
+        }
+
+        yearSection.querySelector("#show-less-box").closest("div").classList.remove("d-none");
+      });
+    });
+
+    section.querySelectorAll("#show-less-box").forEach(showLessBtn => {
+      showLessBtn.addEventListener("click", function () {
+        let yearSection = this.closest("div[id]");
+        let visibleBoxes = yearSection.querySelectorAll(".box:not(.d-none)");
+
+        // Make sure we don't hide the initial 7 entries
+        let start = Math.max(7, visibleBoxes.length - 4);
+        for (let i = start; i < visibleBoxes.length; i++) {
+          visibleBoxes[i].classList.add("d-none");
+        }
+
+        if (visibleBoxes.length <= 11) {
+          this.closest("div").classList.add("d-none");
+        }
+
+        yearSection.querySelector("#show-more-box").classList.remove("d-none");
+      });
+    });
+  });
+
   // Show More Team Members
 
   // Current Team
@@ -78,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const nextCount = visibleCount + increment;
     for (let i = visibleCount; i < nextCount && i < teamMembers.length; i++) {
       if (teamMembers[i]) {
-      teamMembers[i].classList.remove("d-none");
+        teamMembers[i].classList.remove("d-none");
       }
     }
     visibleCount = nextCount;
@@ -92,7 +130,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  showLessButton.addEventListener("click", function() {
+  showLessButton.addEventListener("click", function () {
     // Calculate the next set of members to hide
     const nextCount = visibleCount - increment;
     for (let i = visibleCount - 1; i >= nextCount && i >= 8; i--) {
@@ -114,7 +152,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   // Tech Team
-  showMoreButtonTech.addEventListener("click", function() {
+  showMoreButtonTech.addEventListener("click", function () {
     // Calculate the next set of members to show
     const nextCountTech = visibleCountTech + incrementTech;
     for (let i = visibleCountTech; i < nextCountTech && i < teamMembersTech.length; i++) {
@@ -135,7 +173,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 
-  showLessButtonTech.addEventListener("click", function() {
+  showLessButtonTech.addEventListener("click", function () {
     // Calculate the next set of members to hide
     const nextCountTech = visibleCountTech - incrementTech;
     for (let i = visibleCountTech - 1; i >= nextCountTech && i >= 8; i--) {
