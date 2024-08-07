@@ -93,13 +93,11 @@
       {{ range .paragraph }}
       <p class="text-16 inter-600 lh-base dark-700">{{ . | markdownify }}</p>
       {{ end }}
-      <div class="row g-3">
+      <div class="d-flex gap-3 ms-1 ms-md-0">
         {{ range .logos }}
-        <div class="col-2">
-          <div class="p-1 shadow-sm rounded-3">
-            <img src="{{ . }}" alt="nwb-achivements" class="achiImg">
+          <div class="p-1 shadow-sm rounded-3 achiImg">
+            <img src="{{ . }}" alt="nwb-achivements" class="img-fluid">
           </div>
-        </div>
         {{ end }}
       </div>
       <div class="pt-3">
