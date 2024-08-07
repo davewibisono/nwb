@@ -14,6 +14,25 @@ document.addEventListener("DOMContentLoaded", function () {
   let visibleCountTech = 8;
   const incrementTech = 4;
 
+  // menuHumBurger icon toggle Init
+  function menuHumBurgerIcon() {
+    const navbarToggler = document.querySelector(".navbar-toggler");
+    navbarToggler.addEventListener("click", function () {
+        const icons = document.querySelectorAll("i");
+        icons.forEach(icon => {
+            if (icon.classList.contains("d-inline")) {
+                icon.classList.remove("d-inline");
+                icon.classList.add("d-none");
+            } else {
+                icon.classList.remove("d-none");
+                icon.classList.add("d-inline");
+            }
+        });
+    });
+  }
+  menuHumBurgerIcon();
+
+
   // Header Background Change On Scroll
   if (header) {
     window.addEventListener("scroll", function () {
