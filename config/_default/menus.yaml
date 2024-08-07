@@ -21,7 +21,7 @@ main:
     parent: About
   - name: "Contact Us"
     weight: 5
-    url: "/contact-us"
+    url: "contact-us/"
     parent: About
   
   - name: "Community"
@@ -37,15 +37,15 @@ main:
     parent: Community
   - name: "A/V Tools"
     weight: 3
-    url: "/av-tools"
+    url: "av-tools/"
     parent: Community
   - name: "Grants and Projects"
     weight: 4
-    url: "/grants-and-projects"
+    url: "grants-and-projects/"
     parent: Community
   - name: "Working Groups"
     weight: 5
-    url: "/working-groups"
+    url: "working-groups/"
     parent: Community
 
   - name: "Using NWB"
