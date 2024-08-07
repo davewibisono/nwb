@@ -50,7 +50,7 @@ main:
 
   - name: "Using NWB"
     weight: 3
-    url: "/"
+    url: "using-nwb/"
   - name: "Policies"
     weight: 4
     url: "privacy-policy/"
