@@ -39,6 +39,10 @@
   color: #f0f6fa !important;
 }
 
+.light-sky {
+  color: #C3E4FF !important;
+}
+
 .lighter {
   color: #737780 !important;
 }
@@ -81,6 +85,10 @@
 
 .bg-slate {
   background-color: #f5f5f5 !important;
+}
+
+.bg-light-sky {
+  background-color: #C3E4FF !important;
 }
 
 .bg-darken {
