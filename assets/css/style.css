@@ -805,3 +805,15 @@ header {
 .workingSection {
   padding: 80px 0 !important;
 }
+
+/* Privacy Policy */
+.policyLi::marker {
+  color: #d17128 !important;
+  font-size: x-large;
+}
+
+.policyLi a:hover {
+  color: #d17128 !important;
+  text-decoration: underline;
+  text-underline-offset: 5px !important;
+}
