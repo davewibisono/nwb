@@ -62,41 +62,6 @@ news_section:
   btn_text: "See All New"
   btn_link: "/"
 
-# Events
-event_section: 
-  enable: true
-  events: 
-    - date: "2024-07-15"
-      title: "2022 NWB-DANDI Remote Developer Hackathon!"
-      time: "9:00 - 3:00"
-      attenders: "510"
-      btn_text: "Register"
-      btn_link: "/"
-    - date: "2024-07-15"
-      title: "2022 NWB-DANDI Remote Developer Hackathon!"
-      time: "9:00 - 3:00"
-      attenders: "510"
-      btn_text: "Register"
-      btn_link: "/"
-    - date: "2024-07-15"
-      title: "2022 NWB-DANDI Remote Developer Hackathon!"
-      time: "9:00 - 3:00"
-      attenders: "510"
-      btn_text: "Register"
-      btn_link: "/"
-    - date: "2024-07-15"
-      title: "2022 NWB-DANDI Remote Developer Hackathon!"
-      time: "9:00 - 3:00"
-      attenders: "510"
-      btn_text: "Register"
-      btn_link: "/"
-    - date: "2024-07-15"
-      title: "2022 NWB-DANDI Remote Developer Hackathon!"
-      time: "9:00 - 3:00"
-      attenders: "510"
-      btn_text: "Register"
-      btn_link: "/"
-
 # Sponsers 
 sponsers_section:
   enable: true

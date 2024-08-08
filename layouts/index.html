@@ -165,15 +165,15 @@
 {{/* End News And Updates Section */}}
 
 {{/* Events Section */}}
-{{ with .Params.event_section }}
-{{ if .enable }}
+{{ with where .Site.RegularPages "Section" "events" }}
 <section class="section">
   <div class="container-lg d-flex flex-column gap-5">
 
     <h2 class="inter-700 text-40 text-center mb-0">Upcoming Events</h2>
 
     <div class="row g-4 justify-content-center">
-      {{ range .events }}
+      {{ range . }}
+      {{ with .Params }}
       <div class="col-12 col-sm-6 col-lg-4">
         <div class="aboutBox px-3 py-4 animate rounded-3">
           <div class="d-flex flex-column flex-sm-row gap-3 pb-4 border-bottom ">
@@ -210,11 +210,11 @@
         </div>
       </div>
       {{ end }}
+      {{ end }}
     </div>
 
   </div>
 </section>
-{{ end }}
 {{ end }}
 {{/* End Events Section */}}
 
