@@ -33,7 +33,7 @@ main:
     parent: Community
   - name: "Events"
     weight: 2
-    url: "/events"
+    url: "events/"
     parent: Community
   - name: "A/V Tools"
     weight: 3
