@@ -29,7 +29,7 @@ main:
     hasChildren: true
   - name: "News"
     weight: 1
-    url: "/news"
+    url: "news/"
     parent: Community
   - name: "Events"
     weight: 2

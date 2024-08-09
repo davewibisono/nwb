@@ -2,6 +2,8 @@ baseURL: "https://statuesque-alfajores-380f39.netlify.app/"
 languageCode: "en"
 title: "NWB"
 
+paginate: 6
+
 # Markup 
 markup:
   goldmark:
