@@ -4,13 +4,13 @@ about_section:
   enable: true
   image: /images/about-nwb.png
   title: About NWB
-  content: Progress in modern science is enabled by data sharing. Thereare major
+  content: Progress in modern science is enabled by data sharing. There are major
     obstacles, however, that limit the open exchange of data particularly in
-    neuroscience, afield where many small laboratories are pursuing diverse
+    neuroscience, a field where many small laboratories are pursuing diverse
     questions about the brain using a greatvariety of tools and techniques. In
-    mid 2014, The Kavli Foundation initiated Neurodata WithoutBorders, a
+    mid 2014, The Kavli Foundation initiated Neurodata Without Borders, a
     consortium of researchers and foundations with a shared interest in breaking
-    down theobstacles to data sharing.
+    down the obstacles to data sharing.
 overview_section:
   enable: true
   image: /images/overview.png
@@ -32,7 +32,7 @@ initiatives_section:
     <br> announcements about future ones.
 neurophysiology_section:
   enable: true
-  title: "NWB: Neurophysiology"
+  title: "NWB"
   content:
     - text: Unlike in other fields (i.e. genetics and cell biology), neuroscience does
         not have a standardized way to collect and share the wealth of existing
@@ -47,7 +47,7 @@ neurophysiology_section:
         optical physiology experiments, and tracking and stimulus data. The
         project includes not only the NWB format, but also a broad range of
         software for data standardization and application programming interfaces
-        (APIs) for reading and writing the data as well as high-value data sets
+        (APIs) for reading and writing the data as well as high-value datasets
         that have been translated into the NWB data standard.
     - image: /images/Neurophysiology-min.png
     - text: Neurodata Without Borders is intended to serve the broad neuroscience
@@ -55,10 +55,10 @@ neurophysiology_section:
         2.0 was released in February 2019. Please give it a try. Join our
         mailing list for updates or ask questions on our Slack channel.
     - text: To learn more about the approach taken to develop the NWB Format, please
-        read our open access Neuron NeuroView article and bioRxiv preprint.
+        read our open access eLife article.
 nwb_goals_section:
   enable: ture
-  title: "Technical Design Goals of the NWB: N Format"
+  title: "Technical Design Goals of the NWB Format"
   boxes:
     - title: Compatible
       icon: /images/compete.png
