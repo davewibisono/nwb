@@ -85,7 +85,7 @@ section:
             nested_list:
               - heading: Project title
                 icon: /images/p-title.png
-                content: "NWB:N: A Data Standard and Software Ecosystem for Neurophysiology"
+                content: "NWB: A Data Standard and Software Ecosystem for Neurophysiology"
               - heading: Award number
                 icon: /images/a-number.png
                 content: 5R24MH116922

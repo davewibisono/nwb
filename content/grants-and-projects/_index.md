@@ -23,7 +23,7 @@ intro_section:
   content: <a href=''>The Kavli Foundation</a> has provided seed grants to aid
     labs in standardizing their experimental data using the NWB data format.
     Funds were used to support the building and sharing of data or software in
-    the NWB:N ecosystem. We are no longer accepting applications for 2022 and
+    the NWB ecosystem. We are no longer accepting applications for 2022 and
     2023.
   sponsers_title: "Recent seed grant awardees include:"
 sponsers:
@@ -182,7 +182,7 @@ past_projects_section:
   enable: true
   projects:
     - image: /images/nwbn.png
-      title: "NWB:N: A Data Standard and Software Ecosystem for Neurophysiology"
+      title: "NWB: A Data Standard and Software Ecosystem for Neurophysiology"
       content: The National Institutes of Health, through project <a
         href=''>1R24MH116922</a>, funded <a href=''>Oliver Rübel</a> (Lawrence
         Berkeley National Laboratory) and <a href=''>Lydia Ng</a> (Allen
@@ -211,11 +211,11 @@ past_projects_section:
 boxes:
   enable: true
   box:
-    - title: NWB:N Community Liason
+    - title: NWB Community Liason
       content: The Kavli Foundation is providing support (2019-present) to Oliver
         Rübel at the Lawrence Berkeley National Lab to support community
         engagement, outreach and software development. This program is currently
-        supporting Benjamin Dichter as a community liaison for NWB:N.
+        supporting Benjamin Dichter as a community liaison for NWB.
       image: /images/community-liason.png
     - title: Simons Foundation Sponsors Development of MatNWB
       content: The Simons Foundation funds projects (Aug.2017 – present) to develop

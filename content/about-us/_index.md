@@ -92,30 +92,30 @@ history_section:
   content:
     - text: "Launched in mid 2014,  Neurodata Without Borders: Neurophysiology began
         as a pilot project to produce a unified data format for cellular-based
-        neurophysiology data. NWB:N 1.0 was based on representative use case
+        neurophysiology data. NWB 1.0 was based on representative use case
         studies from four laboratories, and the project included a vetting phase
         for assessing whether other data models can also be used in the new
-        common format. The initial development of NWB:N 1.0 was funded by
+        common format. The initial development of NWB 1.0 was funded by
         industry and private foundations. Scientific partners include the Allen
         Institute for Brain Science (AIBS), the Svoboda Lab (Janelia), the
         Meister Lab (Caltech), the Buzsáki Lab (NYU), and Fritz Sommer/Jeff
         Teeters (UCB, maintainers of CRCNS.org). This one-year pilot project
-        resulted in NWB:N 1.0."
-    - text: Building on the success of NWB:N 1.0, the project entered a second phase,
+        resulted in NWB 1.0."
+    - text: Building on the success of NWB 1.0, the project entered a second phase,
         with additional leadership by Dr. Kris Bouchard, Dr. Oliver Rübel
         (Lawrence Berkeley National Laboratory, LBNL), Dr. Loren Frank (UCSF)
         and Dr. Edward Chang (UCSF). One main goal was to develop the next
-        version of NWB:N and to enhance its adoption, through development of an
-        advanced software architecture for NWB:N, a well-articulated data
+        version of NWB and to enhance its adoption, through development of an
+        advanced software architecture for NWB, a well-articulated data
         standards ecosystem, an open community software strategy, and
-        advancements to the NWB:N data standard itself. NWB:N 2.0 was
+        advancements to the NWB data standard itself. NWB 2.0 was
         redeveloped by scientific software engineers/computer scientists at
         LBNL, Dr. Oliver Rübel and Mr. Andrew Tritt, in close collaboration with
-        neuroscience laboratories and the broader NWB:N community. NWB:N 2.0 was
+        neuroscience laboratories and the broader NWB community. NWB 2.0 was
         released in February 2019 and new features continue to be added to the
-        software ecosystem surrounding NWB:N 2.0.
-    - text: The NWB:N project has also created a governance structure. An Executive
-        Board (EB) decides the vision and roadmap for NWB:N and manages
+        software ecosystem surrounding NWB 2.0.
+    - text: The NWB project has also created a governance structure. An Executive
+        Board (EB) decides the vision and roadmap for NWB and manages
         fundraising and outreach. The EB also works closely with a Technical
         Advisory Board (TAB), which makes technical decisions and maintains the
         software ecosystem.
@@ -124,7 +124,7 @@ history_section:
         (LBNL/UCB), Svoboda lab, Meister lab, Frank lab (UCSF), Chang lab (UCSF)
         and others. As labs adopt the format we also continue to see growing
         sets of data published in NWB. E.g, the AIBS has adopted the use of this
-        format and to date has released numerous NWB:N files assaying mouse
+        format and to date has released numerous NWB files assaying mouse
         visual cortex.
     - wide_image: /images/history.png
 ---

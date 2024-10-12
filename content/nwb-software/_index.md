@@ -6,7 +6,7 @@ software_types:
   content: NWB is more than just a file format; it defines an ecosystem of tools,
     methods, and standards for storing, sharing, and analyzing complex
     neurophysiology data. The following provides a high-level overview of the
-    main components for the NWB:N data standardization ecosystem. For each
+    main components for the NWB data standardization ecosystem. For each
     component we provide an overview of the problem, its function, and a
     description.
   boxes:
@@ -28,7 +28,7 @@ sections:
     image: /images/specsImg.png
     problem: Definition of neuroscience data standards.
     approach: To support the formal and verifiable specification of neurodata file
-      formats,<br> NWB:N relies on the NWB:N specification language.
+      formats,<br> NWB relies on the NWB specification language.
     function: The specification language provides mechanism to formally specify
       the  <br> organization of data.
     upper_description: The specification language is defined in YAML (or JSON). The
@@ -36,30 +36,30 @@ sections:
       organization of complex data using basic concepts, e.g., Groups, Datasets,
       Attributes, and Links. The specification language is used to extend the
       format, which is necessary to store types of data that are not currently
-      managed by the format <br> <a href='/'>Specification Language
+      managed by the format <br> <a href='https://schema-language.readthedocs.io/en/latest/'>Specification Language
       Documentation</a>
   - title: Data API(s)
     image: /images/apiBox.png
     problem: Efficient interaction with neuroscience data.
-    approach: Develop APIs that provide easy-to-use representations of NWB:N
+    approach: Develop APIs that provide easy-to-use representations of NWB
       neurodata types for programmatic use and enable the mapping of these
-      representations to/from data storage based on the NWB:N format
+      representations to/from data storage based on the NWB format
       specification.
     function: The role of data API(s) is to facilitate efficient interaction with
-      neuroscience data stored in the NWB:N data format (e.g,. for reading,
+      neuroscience data stored in the NWB data format (e.g,. for reading,
       writing, querying, and analyzing neuroscience data). An API provides a
       stable and usable interface for programmatic use and development of new
       applications. The API should insulate developers and users from
       implementation details related to the specification language, format
       specification, and data storage.
-    description: NWB:N currently provides the following APIs
+    description: NWB currently provides the following APIs
     list:
       - title: "PyNWB:"
-        content: "Python reference API for NWB: N 2  to read, write, use, extend, and
-          analyze data stored in NWB:N. <a href=''> Documentation . Sources
+        content: "Python reference API for NWB 2  to read, write, use, extend, and
+          analyze data stored in NWB. <a href=''> Documentation . Sources
           (GitHub)</a>"
       - title: MatNWB
-        content: Matlab API for NWB:N. <a href=''> Documentation . Sources (GitHub)</a>
+        content: Matlab API for NWB. <a href=''> Documentation . Sources (GitHub)</a>
     community_software: In addition to the core APIs developed by the NWB team,
       there is a growing collection of software tools and libraries that support
       NWB. See our Analysis and Visualization Tools page for a list of tools
@@ -67,12 +67,12 @@ sections:
   - title: Data Storage
     image: /images/storageImg.png
     problem: Storage of large collections of neuroscience data.
-    approach: The NWB:N format currently uses the <a href=''> Hierarchical Data
+    approach: The NWB format currently uses the <a href=''> Hierarchical Data
       Format (HDF5)</a> as primary storage mechanism.
-    function: Data storage maps NWB:N primitives (Groups, Datasets, Attributes,
+    function: Data storage maps NWB primitives (Groups, Datasets, Attributes,
       Links etc.) to storage. In the case of HDF5 this is currently mostly a
-      1-to-1 mapping as the NWB:N primitives largely match HDF5 primitives.
-    description: HDF5 was selected for the NWB:N format because it meets several key
+      1-to-1 mapping as the NWB primitives largely match HDF5 primitives.
+    description: HDF5 was selected for the NWB format because it meets several key
       requirements. First, HDF5 it is a mature data format standard with
       libraries available in multiple programming languages. Second, HDF5’s
       hierarchical structure allows data to be grouped into logical
@@ -96,11 +96,11 @@ sections:
       objects on Groups and Datasets), and Links (links to Groups and Datasets).
     function: The format specification formally specifies the organization of
       neuroscience data. The format specification provides a verifiable,
-      computer and human readable document that governs the NWB:N format. The
+      computer and human readable document that governs the NWB format. The
       format specification is, hence, central to support development of API’s
       and codes compliant with the NWB format and extension of the NWB format.
-    upper_description: he NWB:N format standard is governed by a formal format
-      specification, the NWB:N schema that is formally specified using the NWB
+    upper_description: he NWB format standard is governed by a formal format
+      specification, the NWB schema that is formally specified using the NWB
       specification language. A new schema file will be published for each
       revision of the NWB format standard. Developers can use the schema to
       validate NWB files or create advanced APIs for NWB data. <br><br><a
