@@ -28,8 +28,6 @@ executive_section:
 current_team_section:
   enable: true
   team_members:
-    - image: /images/img-team-member-career-03.jpg
-      name: Kris Bouchard
     - image: /images/bing.png
       name: Bing Brunton
     - image: /images/elizabeth.png
@@ -46,8 +44,6 @@ current_team_section:
       name: Mala Murthy
     - image: /images/kris.png
       name: Kris Bouchard
-    - image: /images/bing.png
-      name: Bing Brunton
 alumni_section:
   enable: true
   alumni:
