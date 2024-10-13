@@ -14,8 +14,8 @@ intro_section:
   image: /images/archived.png
 date: 2022-03-10T00:00:00.000Z
 lastDate: 2022-03-11T00:00:00.000Z
-comments: ""
-time: ""
+comments: 1
+time: 9:00-3:00
 register_btn: https://docs.google.com/forms/d/e/1FAIpQLSdO77FgZeHxvRGQNiEc-nSj5FTvZBpEBcssdAga9DedQGjvHA/viewform?vc=0&c=0&w=1&flr=0
 weight: 1
 ---
