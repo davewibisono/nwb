@@ -79,5 +79,5 @@ cta_section:
   enable: true
   heading: Join our mailing list to receive news and notices
   btn_text: Register
-  btn_link: /
+  btn_link: https://mailchi.mp/fe2a9bc55a1a/nwb-signup
 ---
