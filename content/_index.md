@@ -25,19 +25,19 @@ card_section:
     - image: /images/github.png
       title: Users & Developers
       btn_text: Get Started
-      btn_link: /
+      btn_link: http://nwb-overview.readthedocs.io/
     - image: /images/question_mark.png
       title: Questions About NWB?
       btn_text: Ask Our Help Desk
-      btn_link: /
+      btn_link: https://github.com/NeurodataWithoutBorders/helpdesk/discussions
     - image: /images/community.png
       title: Connect with the Community
       btn_text: Join the Slack
-      btn_link: /
+      btn_link: https://nwb-users.slack.com/join/shared_invite/zt-9bsx3xdj-wtUILLNzM8a0mOV_RywS~Q#/shared-invite/email
     - image: /images/mail.png
       title: Join Our Mailing List
       btn_text: Sign Up
-      btn_link: /
+      btn_link: https://mailchi.mp/fe2a9bc55a1a/nwb-signup
 portfolio_section:
   enable: true
   image: /images/portfolio.png
