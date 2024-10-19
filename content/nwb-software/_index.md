@@ -55,8 +55,8 @@ sections:
     description: NWB:N currently provides the following APIs
     community_software: In addition to the core APIs developed by the NWB team,
       there is a growing collection of software tools and libraries that support
-      NWB. See our <a href="http://www.nwb.org/tools/" target=_blank>Analysis and Visualization Tools</a> page for a list of tools
-      that support NWB.
+      NWB. See our <a href="http://www.nwb.org/tools/" target=_blank>Analysis
+      and Visualization Tools</a> page for a list of tools that support NWB.
     list:
       - title: "PyNWB:"
         content: 'Python reference API for NWB: N 2  to read, write, use, extend, and
@@ -76,8 +76,9 @@ sections:
   - title: Data Storage
     image: /images/storageImg.png
     problem: Storage of large collections of neuroscience data.
-    approach: The NWB:N format currently uses the <a href=''> Hierarchical Data
-      Format (HDF5)</a> as primary storage mechanism.
+    approach: The NWB:N format currently uses the <a
+      href="https://portal.hdfgroup.org/display/HDF5/HDF5" target=_blank>
+      Hierarchical Data Format (HDF5)</a> as primary storage mechanism.
     function: Data storage maps NWB:N primitives (Groups, Datasets, Attributes,
       Links etc.) to storage. In the case of HDF5 this is currently mostly a
       1-to-1 mapping as the NWB:N primitives largely match HDF5 primitives.
@@ -92,11 +93,13 @@ sections:
       enables data stored in one location to be transparently accessed from
       multiple locations in the hierarchy. The linked data can be external to
       the file. Fourth, HDF5 is widely supported across programming languages
-      (e.g., C, C++, Python, MATLAB, R among others) and tools, such as,
-      HDFView, a free, cross-platform application, can be used to open a file
-      and browse data. Fifth, the HDF Group, a nonprofit group, ensures the
-      ongoing accessibility of HDF-stored data. <br><br> <a href=''>Data Storage
-      Documentation</a>
+      (e.g., C, C++, Python, MATLAB, R among others) and tools, such as, <a
+      href="https://portal.hdfgroup.org/display/HDFVIEW/HDFView"
+      target=_blank>HDFView</a>, a free, cross-platform application, can be used
+      to open a file and browse data. Fifth, the HDF Group, a nonprofit group,
+      ensures the ongoing accessibility of HDF-stored data. <br><br> <a
+      href="https://nwb-storage.readthedocs.io/en/stable" target=_blank>Data
+      Storage Documentation</a>
   - title: Data Standard Schema
     image: /images/schemaImg.png
     problem: Organization of complex collections of neuroscience data.
@@ -113,8 +116,10 @@ sections:
       specification language. A new schema file will be published for each
       revision of the NWB format standard. Developers can use the schema to
       validate NWB files or create advanced APIs for NWB data. <br><br><a
-      href=''>Data Standard Schema </a> <br><br> <a href=''> Documentation
-      Sources (GitHub)</a>
+      href="http://nwb-schema.readthedocs.io/en/stable" target=_blank>Data
+      Standard Schema Documentation</a> <br><br> <a
+      href="https://github.com/NeurodataWithoutBorders/nwb-schema"
+      target=_blank>Sources (GitHub)</a>
 community_tools:
   enable: true
   title: Community Tools
