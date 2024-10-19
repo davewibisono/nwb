@@ -55,7 +55,7 @@ sections:
     description: NWB:N currently provides the following APIs
     community_software: In addition to the core APIs developed by the NWB team,
       there is a growing collection of software tools and libraries that support
-      NWB. See our Analysis and Visualization Tools page for a list of tools
+      NWB. See our <a href="http://www.nwb.org/tools/" target=_blank>Analysis and Visualization Tools</a> page for a list of tools
       that support NWB.
     list:
       - title: "PyNWB:"
