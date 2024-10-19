@@ -61,10 +61,16 @@ sections:
       - title: "PyNWB:"
         content: 'Python reference API for NWB: N 2  to read, write, use, extend, and
           analyze data stored in NWB:N. <a
-          href="https://stately-axolotl-7242f5.netlify.app/nwb-software/"
-          target=_blank> Documentation . Sources (GitHub)</a>'
+          href="https://pynwb.readthedocs.io/en/stable/" target=_blank>
+          Documentation.</a> <a
+          href="https://github.com/NeurodataWithoutBorders/pynwb" target=_blank>
+          Sources (GitHub)</a>'
       - title: MatNWB
-        content: Matlab API for NWB:N. <a href=''> Documentation . Sources (GitHub)</a>
+        content: Matlab API for NWB:N. <a
+          href="https://neurodatawithoutborders.github.io/matnwb/">
+          Documentation.</a> <a
+          href="https://github.com/NeurodataWithoutBorders/matnwb"> Sources
+          (GitHub)</a>
     problem: Efficient interaction with neuroscience data.
     upper_description: ""
   - title: Data Storage
