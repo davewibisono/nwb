@@ -36,15 +36,14 @@ sections:
       organization of complex data using basic concepts, e.g., Groups, Datasets,
       Attributes, and Links. The specification language is used to extend the
       format, which is necessary to store types of data that are not currently
-      managed by the format <br> <a href='/'>Specification Language
-      Documentation</a>
-  - title: Data API(s)
-    image: /images/apiBox.png
-    problem: Efficient interaction with neuroscience data.
-    approach: Develop APIs that provide easy-to-use representations of NWB:N
+      managed by the format <br> <a
+      href="https://schema-language.readthedocs.io/en/stable"
+      target=_blank>Specification Language Documentation</a>
+  - approach: Develop APIs that provide easy-to-use representations of NWB:N
       neurodata types for programmatic use and enable the mapping of these
       representations to/from data storage based on the NWB:N format
       specification.
+    title: Data API(s)
     function: The role of data API(s) is to facilitate efficient interaction with
       neuroscience data stored in the NWB:N data format (e.g,. for reading,
       writing, querying, and analyzing neuroscience data). An API provides a
@@ -52,18 +51,22 @@ sections:
       applications. The API should insulate developers and users from
       implementation details related to the specification language, format
       specification, and data storage.
+    image: /images/apiBox.png
     description: NWB:N currently provides the following APIs
-    list:
-      - title: "PyNWB:"
-        content: "Python reference API for NWB: N 2  to read, write, use, extend, and
-          analyze data stored in NWB:N. <a href=''> Documentation . Sources
-          (GitHub)</a>"
-      - title: MatNWB
-        content: Matlab API for NWB:N. <a href=''> Documentation . Sources (GitHub)</a>
     community_software: In addition to the core APIs developed by the NWB team,
       there is a growing collection of software tools and libraries that support
       NWB. See our Analysis and Visualization Tools page for a list of tools
       that support NWB.
+    list:
+      - title: "PyNWB:"
+        content: 'Python reference API for NWB: N 2  to read, write, use, extend, and
+          analyze data stored in NWB:N. <a
+          href="https://stately-axolotl-7242f5.netlify.app/nwb-software/"
+          target=_blank> Documentation . Sources (GitHub)</a>'
+      - title: MatNWB
+        content: Matlab API for NWB:N. <a href=''> Documentation . Sources (GitHub)</a>
+    problem: Efficient interaction with neuroscience data.
+    upper_description: ""
   - title: Data Storage
     image: /images/storageImg.png
     problem: Storage of large collections of neuroscience data.
